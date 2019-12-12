@@ -267,6 +267,12 @@ class Main {
         		{1,1,1,1,9,8,8,8}
         };
         
+		int n, m;
+        
+        for(n = 0; n < array1.length; n++)
+        	for(m = 0; m < array1[n].length; m++)
+        		System.out.print(array1[n][m] + " ");
+				System.out.println();
         
      
 		
