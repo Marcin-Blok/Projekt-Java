@@ -216,8 +216,43 @@ class Main {
 			System.out.println();
 		}
 		
+		// Oblicz rabat od kwoty zakupów i wyœwietl wartoœæ
+        
+        double amount = 550;
+		String discount = "";
+		double amountToBePaid = 0;
+
+		
+		if(amount >= 20 & amount <= 500) {
+			discount = "2%";
+			amountToBePaid = amount - (amount * 0.020);
+		}else if (amount > 500 & amount <= 2000) {
+			discount = "10%";
+			amountToBePaid = amount - (amount * 0.10);
+		}else if (amount > 2000) { 
+			discount = "50%";
+			amountToBePaid = amount - (amount * 0.50);
+		}else {
+			System.out.println("Wartoœæ twoich zakupów jest zbyt ma³a aby uzyskaæ rabat, wybierz coœ jeszcze aby uzyskaæ zni¿kê.");
+		}
+	
+		System.out.println("Przys³uguje ci rabat w wysokoœci " + discount);
+		System.out.println("Kwota do zap³aty po rabacie wynosi: " + amountToBePaid + "z³");
 		
 		
+		
+		
+		// Pêtla for 
+
+        int i, j;
+        for(i = 0; i <= 3; i++) {
+           for(j = 1; j <= i; j++)
+                System.out.print("*");
+                System.out.println();
+        }
+        
+        System.out.println();
+     
 		
 	}
 }
