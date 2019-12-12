@@ -252,6 +252,22 @@ class Main {
         }
         
         System.out.println();
+		
+		
+		
+		
+        // 3. Zdefiniuj tablicê dwuwymiarow¹ i przypisz do niej wartoœci
+        
+        
+        int array1 [][] = {
+        		
+        		{2,1,5,6,7,1},
+        		{4,2,1,5,6},
+        		{2,4,5},
+        		{1,1,1,1,9,8,8,8}
+        };
+        
+        
      
 		
 	}
