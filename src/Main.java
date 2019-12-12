@@ -370,22 +370,8 @@ class Main {
 
 		int ileJestJedynek = 0;
 		int ocena = 1;
+			
 		
-		int[] liczbaOcen = [6]
-				
-				1, 2, 3, 4, 5, 6
-				0, 0, 0, 0, 0, 0
-		tab = {2342,34,234,2,34,234,23,4,234,23,4,23,42,34,23,42,34,23,4,234,23,4,23,423,423}
-		
-		for(i) {  
-			switch(tab[i]) {
-				case 1: liczbaOcen[0]++; break;
-				case 2 : liczbaOcen[1]++; break;
-			}	
-		}
-		
-		ileJestJedynek = 4;
-		ileJestDwojek = 2;
 		
 	}
 
