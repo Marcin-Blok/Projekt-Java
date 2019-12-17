@@ -403,6 +403,39 @@ class Main {
         System.out.println();
         
         
+        
+        
+      //Zadanie3
+        System.out.println("Zadanie 3 z wykorzystaniem pêtli foreach.");
+
+        int najnizszaOcena = 6;
+        int[] oceny3 = {4, 5, 6, 4, 3, 4, 5, 6};
+        for (int wartoscZTablicy : oceny3) {
+            if (wartoscZTablicy < najnizszaOcena) {
+                najnizszaOcena = wartoscZTablicy;
+            }
+        }
+        System.out.println("Najni¿sza wartoœæ zdefiniowanej tablicy wynosi: " + najnizszaOcena);
+
+        System.out.println();
+
+        System.out.println("Zadanie 3.1 z wykorzystaniem pêtli for.");
+
+        int k = 0;
+        int lowestValue = 6;
+        int[] tabValue = {4, 6, 6, 3, 2, 4, 5};
+        for (k = 0; k < tabValue.length; k++) {
+            if (tabValue[ k ] < lowestValue) {
+                lowestValue = tabValue[ k ];
+            }
+        }
+        System.out.println("Najni¿sza wartoœæ zdefiniowanej tablicy wynosi: " + lowestValue);
+
+        System.out.println();
+        
+        
+        
+        
 	}
 	
 	
