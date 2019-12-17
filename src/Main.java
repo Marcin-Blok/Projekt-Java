@@ -370,8 +370,23 @@ class Main {
 
 		int ileJestJedynek = 0;
 		int ocena = 1;
-			
 		
+		System.out.println();
+		 //Zadaniae1
+        System.out.println("Zadanie 1");
+
+        double sumaOcen = 0;
+        double sredniaWartosc = 0;
+        int[] oceny = {4, 5, 6, 4, 3, 6};
+
+        for (int z = 0; z < oceny.length; z++) {
+            sumaOcen += oceny[ z ];
+            
+        }
+        sredniaWartosc = sumaOcen / oceny.length;
+        System.out.printf("Œrednia wartoœæ elementów tablicy jest równa %.2f" , sredniaWartosc);
+        System.out.println();
+
 		
 	}
 
