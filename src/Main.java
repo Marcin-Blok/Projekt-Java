@@ -371,7 +371,20 @@ class Main {
 		int ileJestJedynek = 0;
 		int ocena = 1;
 			
-		
+		 //Zadaniae1
+        System.out.println("Zadanie 1");
+
+        int sumaOcen = 0;
+        double sredniaWartosc = 0;
+        int[] oceny = {4, 5, 6, 4, 3, 4};
+
+        for (int z = 0; z < oceny.length; z++) {
+            sumaOcen = sumaOcen + oceny[ z ];
+            sredniaWartosc = sumaOcen / oceny.length;
+        }
+        System.out.println("Œrednia wartoœæ elementów tablicy jest równa " + sredniaWartosc);
+        System.out.println();
+
 		
 	}
 
