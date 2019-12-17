@@ -387,8 +387,25 @@ class Main {
         System.out.printf("Œrednia wartoœæ elementów tablicy jest równa %.2f" , sredniaWartosc);
         System.out.println();
 
-		
+	
+        
+        //Zadanie2
+        System.out.println("Zadanie 2");
+
+        int najwyzszaOcena = 1;
+        int[] oceny2 = {4, 5, 6, 4, 3, 4, 5, 6};
+        for (int wartoscZTablicy : oceny2) {
+            if (wartoscZTablicy > najwyzszaOcena) {
+                najwyzszaOcena = wartoscZTablicy;
+            }
+        }
+        System.out.println("Najwy¿sza wartoœæ zdefiniowanej tablicy wynosi: " + najwyzszaOcena);
+        System.out.println();
+        
+        
 	}
+	
+	
 
 	// 1. Dla podanej tablicy ocen, oblicz ich œredni¹
 	// 2. Wyœwietl najwy¿sz¹ ocenê
