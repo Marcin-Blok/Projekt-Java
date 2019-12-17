@@ -224,9 +224,9 @@ class Main {
 			System.out.println(
 					"Wartoœæ twoich zakupów jest zbyt ma³a aby uzyskaæ rabat, wybierz coœ jeszcze aby uzyskaæ zni¿kê.");
 		}
-		
+
 		if (amount >= 20) {
-		
+
 			System.out.println("Przys³uguje ci rabat w wysokoœci " + discount);
 			System.out.println("Kwota do zap³aty po rabacie wynosi: " + amountToBePaid + "z³");
 		}
@@ -297,152 +297,177 @@ class Main {
 			}
 			System.out.println();
 		}
-		
+
 		System.out.println();
-		
+
 		int[] tmp = array1[0];
 		array1[0] = array1[2];
 		array1[2] = tmp;
-		
+
 		for (n = 0; n < array1.length; n++) {
 			for (m = 0; m < array1[n].length; m++) {
 				System.out.print(array1[n][m] + " ");
 			}
 			System.out.println();
 		}
-		
-		
+
 		for (n = 0; n < array1.length; n++) {
 			for (m = 0; m < array1[n].length; m++) {
-				if(array1[n][m] == 1) {
+				if (array1[n][m] == 1) {
 					array1[n][m] = 10;
 				}
 			}
 			System.out.println();
 		}
-		
+
 		System.out.println();
-		
-		
+
 		for (n = 0; n < array1.length; n++) {
 			for (m = 0; m < array1[n].length; m++) {
 				System.out.print(array1[n][m] + " ");
 			}
 			System.out.println();
 		}
-		
-		
-		
+
 		System.out.println();
-		
+
 		// foreach
 		// kolekcja tablica, lista itp.
-		int[] liczbyCalkowite = {4,5,1,5,52,6,3,2};
-		for(int jaksldfjalskd : liczbyCalkowite) {
+		int[] liczbyCalkowite = { 4, 5, 1, 5, 52, 6, 3, 2 };
+		for (int jaksldfjalskd : liczbyCalkowite) {
 			System.out.println(jaksldfjalskd);
-			
+
 		}
-		
+
 		System.out.println();
-		
-		// dwuwymiarowa	
-		
-		for(int[] tab:array1) {
-			for(int liczba:tab) {
-				if(liczba == 10) {
-					break;	
+
+		// dwuwymiarowa
+
+		for (int[] tab : array1) {
+			for (int liczba : tab) {
+				if (liczba == 10) {
+					break;
 				}
 				System.out.print(liczba);
 			}
 			System.out.println();
 		}
-		
-		for(int[] tab:array1) {
-			for(int liczba:tab) {
-				if(liczba == 10) {
-					continue;	
+
+		for (int[] tab : array1) {
+			for (int liczba : tab) {
+				if (liczba == 10) {
+					continue;
 				}
-				System.out.print(liczba);				
+				System.out.print(liczba);
 			}
 			System.out.println();
-		}		
-		
+		}
 
 		int ileJestJedynek = 0;
 		int ocena = 1;
-		
+
 		System.out.println();
-		 //Zadaniae1
-        System.out.println("Zadanie 1");
+		// Zadaniae1
+		System.out.println("Zadanie 1");
 
-        double sumaOcen = 0;
-        double sredniaWartosc = 0;
-        int[] oceny = {4, 5, 6, 4, 3, 6};
+		double sumaOcen = 0;
+		double sredniaWartosc = 0;
+		int[] oceny = { 4, 5, 6, 4, 3, 6 };
 
-        for (int z = 0; z < oceny.length; z++) {
-            sumaOcen += oceny[ z ];
-            
-        }
-        sredniaWartosc = sumaOcen / oceny.length;
-        System.out.printf("Œrednia wartoœæ elementów tablicy jest równa %.2f" , sredniaWartosc);
-        System.out.println();
+		for (int z = 0; z < oceny.length; z++) {
+			sumaOcen += oceny[z];
 
-	
-        
-        //Zadanie2
-        System.out.println("Zadanie 2");
+		}
+		sredniaWartosc = sumaOcen / oceny.length;
+		System.out.printf("Œrednia wartoœæ elementów tablicy jest równa %.2f", sredniaWartosc);
+		System.out.println();
 
-        int najwyzszaOcena = 1;
-        int[] oceny2 = {4, 5, 6, 4, 3, 4, 5, 6};
-        for (int wartoscZTablicy : oceny2) {
-            if (wartoscZTablicy > najwyzszaOcena) {
-                najwyzszaOcena = wartoscZTablicy;
-            }
-        }
-        System.out.println("Najwy¿sza wartoœæ zdefiniowanej tablicy wynosi: " + najwyzszaOcena);
-        System.out.println();
-        
-        
-        
-        
-      //Zadanie3
-        System.out.println("Zadanie 3 z wykorzystaniem pêtli foreach.");
+		// Zadanie2
+		System.out.println("Zadanie 2");
 
-        int najnizszaOcena = 6;
-        int[] oceny3 = {4, 5, 6, 4, 3, 4, 5, 6};
-        for (int wartoscZTablicy : oceny3) {
-            if (wartoscZTablicy < najnizszaOcena) {
-                najnizszaOcena = wartoscZTablicy;
-            }
-        }
-        System.out.println("Najni¿sza wartoœæ zdefiniowanej tablicy wynosi: " + najnizszaOcena);
+		int najwyzszaOcena = 1;
+		int[] oceny2 = { 4, 5, 6, 4, 3, 4, 5, 6 };
+		for (int wartoscZTablicy : oceny2) {
+			if (wartoscZTablicy > najwyzszaOcena) {
+				najwyzszaOcena = wartoscZTablicy;
+			}
+		}
+		System.out.println("Najwy¿sza wartoœæ zdefiniowanej tablicy wynosi: " + najwyzszaOcena);
+		System.out.println();
 
-        System.out.println();
+		// Zadanie3
+		System.out.println("Zadanie 3 z wykorzystaniem pêtli foreach.");
 
-        System.out.println("Zadanie 3.1 z wykorzystaniem pêtli for.");
+		int najnizszaOcena = 6;
+		int[] oceny3 = { 4, 5, 6, 4, 3, 4, 5, 6 };
+		for (int wartoscZTablicy : oceny3) {
+			if (wartoscZTablicy < najnizszaOcena) {
+				najnizszaOcena = wartoscZTablicy;
+			}
+		}
+		System.out.println("Najni¿sza wartoœæ zdefiniowanej tablicy wynosi: " + najnizszaOcena);
 
-        int k = 0;
-        int lowestValue = 6;
-        int[] tabValue = {4, 6, 6, 3, 2, 4, 5};
-        for (k = 0; k < tabValue.length; k++) {
-            if (tabValue[ k ] < lowestValue) {
-                lowestValue = tabValue[ k ];
-            }
-        }
-        System.out.println("Najni¿sza wartoœæ zdefiniowanej tablicy wynosi: " + lowestValue);
+		System.out.println();
 
-        System.out.println();
-        
-        
-        
-        
+		System.out.println("Zadanie 3.1 z wykorzystaniem pêtli for.");
+
+		int k = 0;
+		int lowestValue = 6;
+		int[] tabValue = { 4, 6, 6, 3, 2, 4, 5 };
+		for (k = 0; k < tabValue.length; k++) {
+			if (tabValue[k] < lowestValue) {
+				lowestValue = tabValue[k];
+			}
+		}
+		System.out.println("Najni¿sza wartoœæ zdefiniowanej tablicy wynosi: " + lowestValue);
+
+		System.out.println();
+
+		// Zadanie 4
+
+		int index;
+		int[] iloscOcen = new int[6];
+		int najwiêkszaIloœæOcenWTablicy = 0;
+		int[] tablicaOcen = { 5, 4, 4, 6, 4, 3, 2, 2, 1, 6, 3, 5,5,5,5,5 };
+
+		for (index = 0; index < tablicaOcen.length; index++) {
+			switch (tablicaOcen[index]) {
+			case 1:
+				iloscOcen[0]++;
+				break;
+			case 2:
+				iloscOcen[1]++;
+				break;
+			case 3:
+				iloscOcen[2]++;
+				break;
+			case 4:
+				iloscOcen[3]++;
+				break;
+			case 5:
+				iloscOcen[4]++;
+				break;
+			case 6:
+				iloscOcen[5]++;
+				break;
+			}
+		}
+
+		System.out.println(iloscOcen[3]);
+
+		int indexNajwiêkszej = 0;
+		for (int index2 = 0; index2 < iloscOcen.length; index2++) {
+			if (najwiêkszaIloœæOcenWTablicy < iloscOcen[index2]) {
+				najwiêkszaIloœæOcenWTablicy = iloscOcen[index2];
+				indexNajwiêkszej = index2;
+			}
+		}
+		System.out.println("Najczêœciej wystêpuj¹c¹ ocen¹ jest " + (indexNajwiêkszej + 1));
 	}
-	
-	
-
-	// 1. Dla podanej tablicy ocen, oblicz ich œredni¹
-	// 2. Wyœwietl najwy¿sz¹ ocenê
-	// 3. Wyœwietl najmniejsz¹ ocenê
-	// 4. Które oceny przewa¿aj¹ ?
 
 }
+
+// 1. Dla podanej tablicy ocen, oblicz ich œredni¹
+// 2. Wyœwietl najwy¿sz¹ ocenê
+// 3. Wyœwietl najmniejsz¹ ocenê
+// 4. Które oceny przewa¿aj¹ ?
