@@ -5,6 +5,14 @@ import javax.xml.transform.Source;
 class Main {
 	public static void main(String args[]) {
 		System.out.println("Hello World !");
+		
+		/*
+		 * System.out.println(min(1, 2, 3)); 
+		 * System.out.println(min(-1, -2, -3));
+		 * System.out.println(min(3, 5, 3)); 
+		 * System.out.println(min(5, 5, 10));
+		 */	
+		
 
 		// instrukcje wyboru
 
@@ -362,6 +370,12 @@ class Main {
 			}
 			System.out.println();
 		}
+		
+// 1. Dla podanej tablicy ocen, oblicz ich œredni¹
+// 2. Wyœwietl najwy¿sz¹ ocenê
+// 3. Wyœwietl najmniejsz¹ ocenê
+// 4. Które oceny przewa¿aj¹ ?
+
 
 		int ileJestJedynek = 0;
 		int ocena = 1;
@@ -464,10 +478,42 @@ class Main {
 		}
 		System.out.println("Najczêœciej wystêpuj¹c¹ ocen¹ jest " + (indexNajwiêkszej + 1));
 	}
+	
+/* Napisz funkcjê, która wybiera najmniejsz¹ z trzech liczb.
 
+Wskazówka:
+Musisz napisaæ cia³o istniej¹cej funkcji min.
+Wymagania:
+
+    The program should display text on the screen.
+    The min method should not display text on the screen.
+    The main method should call the min method four times.
+    The main method should display the result of the min method. Each time, on a new line.
+    The min method must return the minimum of the numbers a, b, and c.
+ 
+
+	
+
+	    public static int min(int a, int b, int c) 
+	    {
+	        
+	       int m2;
+
+	        if ((a < b) && (a < c)){
+	            m2 = a;
+	        }else if ((b < a) && (b < c)){
+	            m2 = b;
+	        }else if ((c < a) && (c < b)){
+	            m2 = c;
+	        }
+
+	        return m2;
+	    }
+
+	   
+*/
+	
+	
+	
 }
 
-// 1. Dla podanej tablicy ocen, oblicz ich œredni¹
-// 2. Wyœwietl najwy¿sz¹ ocenê
-// 3. Wyœwietl najmniejsz¹ ocenê
-// 4. Które oceny przewa¿aj¹ ?
