@@ -211,6 +211,7 @@ class Main {
 				System.out.print(tabliczkaMnozenia[row][column] + "\t");
 			}
 			System.out.println();
+	
 		}
 
 		// Oblicz rabat od kwoty zakupów i wyœwietl wartoœæ
@@ -477,6 +478,7 @@ class Main {
 			}
 		}
 		System.out.println("Najczêœciej wystêpuj¹c¹ ocen¹ jest " + (indexNajwiêkszej + 1));
+		
 	}
 	
 /* Napisz funkcjê, która wybiera najmniejsz¹ z trzech liczb.
