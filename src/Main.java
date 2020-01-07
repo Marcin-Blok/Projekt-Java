@@ -477,9 +477,88 @@ class Main {
 			}
 		}
 		System.out.println("Najczêœciej wystêpuj¹c¹ ocen¹ jest " + (indexNajwiêkszej + 1));
+		System.out.println();
+
+	//
+		
+		
+		for (int x=0; x<10; x++){
+				System.out.print("*");
+			for(int y =0; y < 10; y++) {
+				System.out.print( " ^" + "");
+			}
+				System.out.println(" *" +  " ");
+		}
+		System.out.println();
+		
+		
+		
+		
+		
+		
+		
+		for (int x=0; x<10; x++){
+		
+		for(int y =0; y < (10 - x); y++) {
+			System.out.print( "1 " + "");
+		}
+		System.out.println();
+		}
+		System.out.println();
+		
+		
+		
+		
+		
+		
+		for(int s=0; s<10; s++) {
+			for(int t = 0; t <=s; t++) {
+				System.out.print("2 ");
+			}
+		System.out.println();
+		}
+		System.out.println();
+		
+		
+		
+		
+		
+		
+		
+		for(int s1 = 1; s1 <= 10; s1++){
+			for(int s2 = 1; s2 <=( 10-s1); s2++) {
+				System.out.print(" ");
+			}
+				for(int a = 1; a<=s1; a++) {
+					System.out.print("3 "); // Tutaj spacja obok liczby drukowanej sprawia ¿e zmienia siê trójk¹t !!!
+				}
+				System.out.println();
+				}
+		
+		System.out.println();
+		
+		 int val = 8;
+	        for (int i1 = 1; i1 <= val; i1++) {
+	            for (int j7 = 1; j7 <= val-i1; j7++) {
+	                System.out.print(" ");
+	            }
+	            for (int k7 = 1; k7 <= i1; k7++) {
+	                System.out.print("3");
+	            }
+	            System.out.println("");
+	        }
+	    }
+		
 	}
+
+		
+	
+
 	
 /* Napisz funkcjê, która wybiera najmniejsz¹ z trzech liczb.
+
+
+
 
 Wskazówka:
 Musisz napisaæ cia³o istniej¹cej funkcji min.
@@ -515,5 +594,5 @@ Wymagania:
 	
 	
 	
-}
+	
 
