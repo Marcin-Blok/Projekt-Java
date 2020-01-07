@@ -557,6 +557,9 @@ class Main {
 	
 /* Napisz funkcjê, która wybiera najmniejsz¹ z trzech liczb.
 
+
+
+
 Wskazówka:
 Musisz napisaæ cia³o istniej¹cej funkcji min.
 Wymagania:
