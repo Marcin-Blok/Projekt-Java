@@ -71,16 +71,16 @@ public class ObiektowoscDemo {
 		
 		
 		Adres adres = new Adres("Koœciuszki", 37, 2, "44-100");
-		System.out.println("Kod pocztowy: "+adres.kodPocztowy);
+		System.out.println("Kod pocztowy: "+adres.getKodPocztowy());
 	
 		// wyœwietlanie
-		System.out.println(adres.kodPocztowy);
+		System.out.println(adres.getKodPocztowy());
 		
 		// zmiana wartoœci
-		adres.kodPocztowy = "12-312";
+		adres.setKodPocztowy("12-312");
 
 		// wyœwietlanie
-		System.out.println(adres.kodPocztowy);
+		System.out.println(adres.getKodPocztowy());
 		
 		
 		// tworzenie æwiczêñ
@@ -89,12 +89,29 @@ public class ObiektowoscDemo {
 		Cwiczenia c1 = new Cwiczenia("Java", 12, 13, w1);
 		Cwiczenia c2 = new Cwiczenia("Matematyka", 13, 15, w1);
 		
-		System.out.println("Nazwa cwiczen: "+c1.nazwa+". Imiê wyk³adowcy: "+c1.wykladowca.imie+". Adres wyk³adowcy: "+c1.wykladowca.adres.ulica+" "+c1.wykladowca.adres.numerDomu+"/"+c1.wykladowca.adres.numerMieszkania);
-		System.out.println("Nazwa cwiczen: "+c2.nazwa+". Imiê wyk³adowcy: "+c2.wykladowca.imie+". Adres wyk³adowcy: "+c2.wykladowca.adres.ulica+" "+c2.wykladowca.adres.numerDomu+"/"+c2.wykladowca.adres.numerMieszkania);
+		System.out.println("Nazwa cwiczen: "+c1.getNazwa()+". Imiê wyk³adowcy: "+c1.getWykladowca().getImie()+". Adres wyk³adowcy: "+c1.getWykladowca().getAdres().getUlica()+" "+c1.getWykladowca().getAdres().getNumerDomu()+"/"+c1.getWykladowca().getAdres().getNumerMieszkania());
+		System.out.println("Nazwa cwiczen: "+c2.getNazwa()+". Imiê wyk³adowcy: "+c2.getWykladowca().getImie()+". Adres wyk³adowcy: "+c2.getWykladowca().getAdres().getUlica()+" "+c2.getWykladowca().getAdres().getNumerDomu()+"/"+c2.getWykladowca().getAdres().getNumerMieszkania());
+		
+
+		System.out.println("----------------------------------------------");
+		
+		
+		// przekazywanie przez wartoœæ
+		int a = 10;
+		
+		// przekazywanie przez referencjê
+		Liczba l = new Liczba();
+		l.a = 10;
+		
+		Utils utils = new Utils();		
+		utils.dodajIWyswietl(a, l);
+		
+		System.out.println("Liczba liczba: "+a);
+		System.out.println("Liczba l: "+l.a);
 		
 		
 		
-		
+		Wykladowca w2 = new Wykladowca("Stefana", "Klawikowski", utils.stworzAdres());
 		
 	}
 }
