@@ -4,9 +4,9 @@ public class Adres {
 	String ulica;
 	int numerDomu;
 	int numerMieszkania;
-	int kodPocztowy;
+	String kodPocztowy;
 	
-	Adres(String ulica, int numerDomu, int numerMieszkania, int kodPocztowy){
+	Adres(String ulica, int numerDomu, int numerMieszkania, String kodPocztowy){
 		this.ulica = ulica;
 		this.numerDomu = numerDomu;
 		this.numerMieszkania = numerMieszkania;

@@ -1,9 +1,8 @@
 package obiektowosc;
 
 public class Student {
-	private String imie;
-	private String nazwisko;
-	
+	String imie;
+	String nazwisko;
 	
 	Student(String imie, String nazwisko){
 		

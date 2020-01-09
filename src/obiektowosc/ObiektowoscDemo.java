@@ -70,8 +70,30 @@ public class ObiektowoscDemo {
 		System.out.println("----------------------------------------------");
 		
 		
-		Adres adres = new Adres("Koœciuszki", 37, 2, 44-100);
+		Adres adres = new Adres("Koœciuszki", 37, 2, "44-100");
+		System.out.println("Kod pocztowy: "+adres.kodPocztowy);
 	
+		// wyœwietlanie
+		System.out.println(adres.kodPocztowy);
+		
+		// zmiana wartoœci
+		adres.kodPocztowy = "12-312";
+
+		// wyœwietlanie
+		System.out.println(adres.kodPocztowy);
+		
+		
+		// tworzenie æwiczêñ
+		Adres a1 = new Adres("Koœciuszki", 12, 4, "12-123");
+		Wykladowca w1 = new Wykladowca("Marian", "Kowalski", a1);
+		Cwiczenia c1 = new Cwiczenia("Java", 12, 13, w1);
+		Cwiczenia c2 = new Cwiczenia("Matematyka", 13, 15, w1);
+		
+		System.out.println("Nazwa cwiczen: "+c1.nazwa+". Imiê wyk³adowcy: "+c1.wykladowca.imie+". Adres wyk³adowcy: "+c1.wykladowca.adres.ulica+" "+c1.wykladowca.adres.numerDomu+"/"+c1.wykladowca.adres.numerMieszkania);
+		System.out.println("Nazwa cwiczen: "+c2.nazwa+". Imiê wyk³adowcy: "+c2.wykladowca.imie+". Adres wyk³adowcy: "+c2.wykladowca.adres.ulica+" "+c2.wykladowca.adres.numerDomu+"/"+c2.wykladowca.adres.numerMieszkania);
+		
+		
+		
 		
 		
 	}
