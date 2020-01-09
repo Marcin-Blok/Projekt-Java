@@ -67,6 +67,12 @@ public class ObiektowoscDemo {
 		klient1.przywitaj(tekstPowitania, znakKoncowy);
 		klient2.przywitaj(tekstPowitania, znakKoncowy);
 		
+		System.out.println("----------------------------------------------");
+		
+		
+		Adres adres = new Adres("Koœciuszki", 37, 2, 44-100);
+	
+		
 		
 	}
 }
