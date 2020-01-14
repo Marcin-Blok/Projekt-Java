@@ -1,5 +1,7 @@
 package obiektowosc;
 
+
+
 public class Adres {
 	private String ulica;
 	private int numerDomu;
@@ -44,4 +46,6 @@ public class Adres {
 	public void setKodPocztowy(String kodPocztowy) {
 		this.kodPocztowy = kodPocztowy;
 	}
+
+	
 }
