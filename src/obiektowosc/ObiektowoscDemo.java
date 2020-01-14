@@ -116,6 +116,10 @@ public class ObiektowoscDemo {
 		System.out.println("------------------14-01-2020----------------------------");
 		
 		
+		Kadry kadry = new Kadry();
+		Pracownik pracownik = new Pracownik("Marian", "Parady¿", 3400, 'M', 1);
+		kadry.dodajPracownika(pracownik);
+		
 		
 	}
 }
