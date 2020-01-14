@@ -113,5 +113,9 @@ public class ObiektowoscDemo {
 		
 		Wykladowca w2 = new Wykladowca("Stefana", "Klawikowski", utils.stworzAdres());
 		
+		System.out.println("------------------14-01-2020----------------------------");
+		
+		
+		
 	}
 }
