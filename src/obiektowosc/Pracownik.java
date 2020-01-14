@@ -25,7 +25,7 @@ public class Pracownik {
 	// Nadpisanie metody toString()
 	@Override
 	public String toString() {
-		return ("Dana pracownika" + imie + " " + nazwisko + " " + placa + " " + plec + " " + dzial);
+		return ("Dana pracownika " + imie + " " + nazwisko + " " + placa + " " + plec + " " + dzial);
 	}
 
 	// Metoda która zwraca true or false zale¿nie od tego czy pracownik jest
