@@ -3,8 +3,9 @@ package obiektowosc;
 public class Student {
 	private String imie;
 	private String nazwisko;
+	private String email;
 
-	Student(String imie, String nazwisko) {
+	public Student(String imie, String nazwisko) {
 		this.imie = imie;
 		this.nazwisko = nazwisko;
 	}
@@ -24,4 +25,18 @@ public class Student {
 	public void setNazwisko(String nazwisko) {
 		this.nazwisko = nazwisko;
 	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	@Override
+	public String toString() {
+		return imie + " " + nazwisko;
+	}
+
 }
