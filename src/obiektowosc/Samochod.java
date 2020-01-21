@@ -5,8 +5,11 @@ public class Samochod {
 	String marka;
 	int przebieg;
 	double cena;
+	int czyAktywny;
+	static int liczbaSamochod = 0;
 
 	Samochod() {
+		liczbaSamochod++;
 	}
 
 	Samochod(String kolor, String marka, int przebieg, double cena) {
@@ -14,6 +17,7 @@ public class Samochod {
 		this.marka = marka;
 		this.przebieg = przebieg;
 		this.cena = cena;
+		liczbaSamochod++;
 	}
 
 	// metoda która: nic nie zwraca
@@ -42,4 +46,6 @@ public class Samochod {
 	double cenaPoRabacie(int rabat) {
 		return cena - (cena * rabat / 100);
 	}
+
+	
 }
