@@ -10,6 +10,10 @@ public class Wykladowca {
 		this.nazwisko = nazwisko;
 		this.adres = adres;
 	}
+	
+	Wykladowca(String imie){
+		this.imie = imie;
+	}
 
 	public String getImie() {
 		return imie;

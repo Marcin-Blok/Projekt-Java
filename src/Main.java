@@ -588,6 +588,8 @@ Wymagania:
 
 	        return m2;
 	    }
+	    
+	    
 
 	   
 */
