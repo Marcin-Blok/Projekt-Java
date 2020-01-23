@@ -22,8 +22,8 @@ public class Utils {
 		return adres;
 	}
 
-	Student stworzStudenta() {
-		return new Student("Tomek", "Ziemann");
+	public static Student stworzStudenta() {
+		return new Student("Tomek", "Ziemann",22,"tomek.zieman@onet.pl",stworzAdres(), 14);
 	}
 
 	static String pobierzAktualnaDate() {
@@ -54,9 +54,9 @@ public class Utils {
 		return sum;
 	}
 	
-	static void przywitaj(String tekstPowitania, Wykladowca ... wykladowcy) {
-		for(Wykladowca wykladowca : wykladowcy) {
-			System.out.println(tekstPowitania+wykladowca.getImie());
+	static void przywitaj(String tekstPowitania, Osoba ... osoby) {
+		for(Osoba osoba : osoby) {
+			System.out.println(tekstPowitania+osoba.getImie()+". "+osoba.getImie()+osoba.kimJestem());
 		}
 		
 	}

@@ -44,5 +44,7 @@ public class Cwiczenia {
 	public void setWykladowca(Wykladowca wykladowca) {
 		this.wykladowca = wykladowca;
 	}
+	
+	
 
 }
