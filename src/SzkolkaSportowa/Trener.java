@@ -6,8 +6,8 @@ public class Trener extends Osoba {
 	private double pensja;
 	private String doswiadczenie;
 
-	public Trener(String imie, String nazwisko, LocalDate dataurodzenia, double pensja, String doswiadczenie) {
-		super(imie, nazwisko, dataurodzenia);
+	public Trener(String imie, String nazwisko, LocalDate dataUrodzenia, double pensja, String doswiadczenie) {
+		super(imie, nazwisko, dataUrodzenia);
 		this.pensja = pensja;
 		this.doswiadczenie = doswiadczenie;
 	}

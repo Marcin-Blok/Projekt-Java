@@ -8,9 +8,9 @@ public abstract class Sportowiec extends Osoba {
 	private String aktualnyKlub;
 	private Trener trener;
 
-	public Sportowiec(String imie, String nazwisko, LocalDate dataurodzenia, String dieta,
+	public Sportowiec(String imie, String nazwisko, LocalDate dataUrodzenia, String dieta,
 			LocalDate dataRozpoczeciaKariery, String aktualnyKlub, Trener trener) {
-		super(imie, nazwisko, dataurodzenia);
+		super(imie, nazwisko, dataUrodzenia);
 		this.dieta = dieta;
 		this.dataRozpoczeciaKariery = dataRozpoczeciaKariery;
 		this.aktualnyKlub = aktualnyKlub;

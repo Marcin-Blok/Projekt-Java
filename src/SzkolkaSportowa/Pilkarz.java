@@ -7,9 +7,9 @@ public class Pilkarz extends Sportowiec {
 
 	
 
-	public Pilkarz(String imie, String nazwisko, LocalDate dataurodzenia, String dieta,
+	public Pilkarz(String imie, String nazwisko, LocalDate dataUrodzenia, String dieta,
 			LocalDate dataRozpoczeciaKariery, String aktualnyKlub, Trener trener, String pozycjaNaBoisku) {
-		super(imie, nazwisko, dataurodzenia, dieta, dataRozpoczeciaKariery, aktualnyKlub, trener);
+		super(imie, nazwisko, dataUrodzenia, dieta, dataRozpoczeciaKariery, aktualnyKlub, trener);
 		this.pozycjaNaBoisku = pozycjaNaBoisku;
 	}
 

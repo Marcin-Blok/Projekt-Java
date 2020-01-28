@@ -6,14 +6,14 @@ import java.time.Period;
 public class Osoba {
 	private String imie;
 	private String nazwisko;
-	private LocalDate dataurodzenia;
+	private LocalDate dataUrodzenia;
 
 	// Konstruktor
-	public Osoba(String imie, String nazwisko, LocalDate dataurodzenia) {
+	public Osoba(String imie, String nazwisko, LocalDate dataUrodzenia) {
 		super();
 		this.imie = imie;
 		this.nazwisko = nazwisko;
-		this.dataurodzenia = dataurodzenia;
+		//this.dataUrodzenia = dataUrodzenia;
 	}
 
 	// Gettery i Settery
@@ -34,19 +34,19 @@ public class Osoba {
 	}
 
 	public LocalDate getDataurodzenia() {
-		return dataurodzenia;
+		return dataUrodzenia;
 	}
 
 	public void setDataurodzenia(LocalDate dataurodzenia) {
-		this.dataurodzenia = dataurodzenia;
+		this.dataUrodzenia = dataurodzenia;
 	}
 	
 	// Sprawdzanie wieku 
 	public void ileMaszLat(LocalDate dataUrodzenia){
-		LocalDate birthDate = LocalDate.of(1980, 9, 07);
-		LocalDate currDate = LocalDate.now();
-
-		Period period = Period.between(birthDate, currDate);
-		System.out.println("Od urodzenia minê³o: "+period.getYears() + " lat, "+period.getMonths()+" miesiêcy, "+period.getDays()+" dni.");
+		LocalDate dataDzisiejsza = LocalDate.now();
+		Period period = Period.between(dataUrodzenia, dataDzisiejsza);
+		
+		System.out.println("Wiek to: "+ period.getYears());
 	}
 }
+	

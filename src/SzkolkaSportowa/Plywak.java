@@ -6,9 +6,9 @@ public class Plywak extends Sportowiec {
 	private String stylPlywania;
 	private double najlepszyCzasWDanymStylu;
 
-	public Plywak(String imie, String nazwisko, LocalDate dataurodzenia, String dieta, LocalDate dataRozpoczeciaKariery,
+	public Plywak(String imie, String nazwisko, LocalDate dataUrodzenia, String dieta, LocalDate dataRozpoczeciaKariery,
 			String aktualnyKlub, Trener trener, String stylPlywania, double najlepszyCzasWDanymStylu) {
-		super(imie, nazwisko, dataurodzenia, dieta, dataRozpoczeciaKariery, aktualnyKlub, trener);
+		super(imie, nazwisko, dataUrodzenia, dieta, dataRozpoczeciaKariery, aktualnyKlub, trener);
 		this.stylPlywania = stylPlywania;
 		this.najlepszyCzasWDanymStylu = najlepszyCzasWDanymStylu;
 	}
