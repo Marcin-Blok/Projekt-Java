@@ -42,7 +42,7 @@ public class Osoba {
 	}
 	
 	// Sprawdzanie wieku 
-	public void ileMaszLat(LocalDate dataUrodzenia){
+	public void sprawdzWiek(LocalDate dataUrodzenia){
 		LocalDate dataDzisiejsza = LocalDate.now();
 		Period period = Period.between(dataUrodzenia, dataDzisiejsza);
 		
