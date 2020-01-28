@@ -87,7 +87,8 @@ public class DateTest {
 		
 		
 		// sprawdz wiek
-		LocalDate birthDate = LocalDate.of(2005, 02, 11);
+		LocalDate birthDate = LocalDate.of(1985, 01, 04);
+		
 		LocalDate currDate = LocalDate.now();
 
 		Period period = Period.between(birthDate, currDate);
