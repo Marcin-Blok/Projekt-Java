@@ -33,16 +33,15 @@ public class Osoba {
 		this.nazwisko = nazwisko;
 	}
 
-	public LocalDate getDataurodzenia() {
+	public LocalDate getDataUrodzenia() {
 		return dataUrodzenia;
 	}
 
-	public void setDataurodzenia(LocalDate dataurodzenia) {
+	public void setDataUrodzenia(LocalDate dataurodzenia) {
 		this.dataUrodzenia = dataurodzenia;
 	}
 	
-	// Sprawdzanie wieku 
-	public void sprawdzWiek(LocalDate dataUrodzenia){
+	public void sprawdzWiek(){
 		LocalDate dataDzisiejsza = LocalDate.now();
 		Period period = Period.between(dataUrodzenia, dataDzisiejsza);
 		

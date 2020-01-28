@@ -1,10 +1,12 @@
 package SzkolkaSportowa;
 
+import java.time.LocalDate;
+
 public class Klub {
 	private String nazwa;
-	private int dataZalozenia;
+	private LocalDate dataZalozenia;
 
-	public Klub(String nazwa, int dataZalozenia) {
+	public Klub(String nazwa, LocalDate dataZalozenia) {
 		super();
 		this.nazwa = nazwa;
 		this.dataZalozenia = dataZalozenia;
@@ -18,11 +20,11 @@ public class Klub {
 		this.nazwa = nazwa;
 	}
 
-	public int getDataZalozenia() {
+	public LocalDate getDataZalozenia() {
 		return dataZalozenia;
 	}
 
-	public void setDataZalozenia(int dataZalozenia) {
+	public void setDataZalozenia(LocalDate dataZalozenia) {
 		this.dataZalozenia = dataZalozenia;
 	}
 

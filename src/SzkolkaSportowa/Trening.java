@@ -1,32 +1,27 @@
 package SzkolkaSportowa;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 public class Trening {
-	private LocalDate dataTreningu;
-	private LocalDateTime godzinaTreningu;
-
-	public Trening(LocalDate dataTreningu, LocalDateTime godzinaTreningu) {
+	private LocalDateTime terminTreningu;
+	private Trener trener;
+	private Sportowiec[] sportowcy;
+	
+	public Trening(LocalDateTime terminTreningu, Trener trener, Sportowiec ... sportowcy) {
 		super();
-		this.dataTreningu = dataTreningu;
-		this.godzinaTreningu = godzinaTreningu;
+		this.terminTreningu = terminTreningu;
+		this.trener = trener;
+		this.sportowcy = sportowcy;
 	}
 
-	public LocalDate getDataTreningu() {
-		return dataTreningu;
+	public LocalDateTime getTerminTreningu() {
+		return terminTreningu;
 	}
 
-	public void setDataTreningu(LocalDate dataTreningu) {
-		this.dataTreningu = dataTreningu;
+	public void setTerminTreningu(LocalDateTime terminTreningu) {
+		this.terminTreningu = terminTreningu;
 	}
-
-	public LocalDateTime getGodzinaTreningu() {
-		return godzinaTreningu;
-	}
-
-	public void setGodzinaTreningu(LocalDateTime godzinaTreningu) {
-		this.godzinaTreningu = godzinaTreningu;
-	}
+	
+	
 
 }

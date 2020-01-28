@@ -7,7 +7,7 @@ public class Biegacz extends Sportowiec {
 	private double najlepszyCzasNaDanymDystansie;
 
 	public Biegacz(String imie, String nazwisko, LocalDate dataUrodzenia, String dieta,
-			LocalDate dataRozpoczeciaKariery, String aktualnyKlub, Trener trener, int preferowanyDystans,
+			LocalDate dataRozpoczeciaKariery, Klub aktualnyKlub, Trener trener, int preferowanyDystans,
 			double najlepszyCzasNaDanymDystansie) {
 		super(imie, nazwisko, dataUrodzenia, dieta, dataRozpoczeciaKariery, aktualnyKlub, trener);
 		this.preferowanyDystans = preferowanyDystans;

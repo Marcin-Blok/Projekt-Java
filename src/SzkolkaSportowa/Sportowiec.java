@@ -5,11 +5,11 @@ import java.time.LocalDate;
 public abstract class Sportowiec extends Osoba {
 	private String dieta;
 	private LocalDate dataRozpoczeciaKariery;
-	private String aktualnyKlub;
+	private Klub aktualnyKlub;
 	private Trener trener;
 
 	public Sportowiec(String imie, String nazwisko, LocalDate dataUrodzenia, String dieta,
-			LocalDate dataRozpoczeciaKariery, String aktualnyKlub, Trener trener) {
+			LocalDate dataRozpoczeciaKariery, Klub aktualnyKlub, Trener trener) {
 		super(imie, nazwisko, dataUrodzenia);
 		this.dieta = dieta;
 		this.dataRozpoczeciaKariery = dataRozpoczeciaKariery;
@@ -33,11 +33,11 @@ public abstract class Sportowiec extends Osoba {
 		this.dataRozpoczeciaKariery = dataRozpoczeciaKariery;
 	}
 
-	public String getAktualnyKlub() {
+	public Klub getAktualnyKlub() {
 		return aktualnyKlub;
 	}
 
-	public void setAktualnyKlub(String aktualnyKlub) {
+	public void setAktualnyKlub(Klub aktualnyKlub) {
 		this.aktualnyKlub = aktualnyKlub;
 	}
 
