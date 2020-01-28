@@ -13,7 +13,7 @@ public class Osoba {
 		super();
 		this.imie = imie;
 		this.nazwisko = nazwisko;
-		//this.dataUrodzenia = dataUrodzenia;
+		this.dataUrodzenia = dataUrodzenia;
 	}
 
 	// Gettery i Settery
