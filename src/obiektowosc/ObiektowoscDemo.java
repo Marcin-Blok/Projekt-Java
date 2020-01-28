@@ -47,15 +47,10 @@ public class ObiektowoscDemo {
 		System.out.println("Cena samochodu testowego po rabacie 50%: " + testowy.cenaPoRabacie(50));
 
 		System.out.println("-------------------");
-		Osoba klient1 = new Osoba();
-		klient1.imie = "Marian";
-		klient1.nazwisko = "Kowalski";
-		klient1.wiek = 44;
+		Adres adres = new Adres("Hutnicza", 2, 2, "22-333");
+		Osoba klient1 = new Wykladowca("Marian", "Kowalski",44, "marian.kowalski@wp.pl", adres, 222.33);
 
-		Osoba klient2 = new Osoba();
-		klient2.imie = "Ela";
-		klient2.nazwisko = "Miotk";
-		klient2.wiek = 22;
+		Osoba klient2 = new Student("Ela", "Miotk", 22, "ela.miotk.@wp.pl", adres, 22);
 
 		String tekstPowitania = "Witaj ";
 		String znakKoncowy = "!";
@@ -64,8 +59,8 @@ public class ObiektowoscDemo {
 
 		System.out.println("----------------------------------------------");
 
-		Adres adres = new Adres("Koœciuszki", 37, 2, "44-100");
-		System.out.println("Kod pocztowy: " + adres.getKodPocztowy());
+		Adres adres2 = new Adres("Koœciuszki", 37, 2, "44-100");
+		System.out.println("Kod pocztowy: " + adres2.getKodPocztowy());
 
 		// wyœwietlanie
 		System.out.println(adres.getKodPocztowy());
@@ -78,7 +73,7 @@ public class ObiektowoscDemo {
 
 		// tworzenie æwiczêñ
 		Adres a1 = new Adres("Koœciuszki", 12, 4, "12-123");
-		Wykladowca w1 = new Wykladowca("Marian", "Kowalski", a1);
+		Wykladowca w1 = new Wykladowca("Marian", "Kowalski", 44, "marian.kowalski@wp.pl", a1, 12000);
 		Cwiczenia c1 = new Cwiczenia("Java", 12, 13, w1);
 		Cwiczenia c2 = new Cwiczenia("Matematyka", 13, 15, w1);
 
@@ -105,7 +100,31 @@ public class ObiektowoscDemo {
 		System.out.println("Liczba liczba: " + a);
 		System.out.println("Liczba l: " + l.a);
 
-		Wykladowca w2 = new Wykladowca("Stefana", "Klawikowski", Utils.stworzAdres());
+		Wykladowca w2 = new Wykladowca("Stefan", "Klawikowski",44,"stefan.klawikowski@wp.pl", Utils.stworzAdres(), 2200.3);
+		
+		
+		// przyk³ad bazowa -> pochodna
+		Osoba osoba1 = w2;
+		Student s = Utils.stworzStudenta();
+		Osoba osoba2 = s;
+		
+		System.out.println("Imiê osoby: "+osoba1.getImie());
+		System.out.println("Imiê osoby: "+osoba2.getImie());
+ 		
+		
+		Utils.przywitaj("Siema ", w2);
+		Utils.przywitaj("Siema ", s);
+		Utils.przywitaj("Siema ", osoba1);
+		
+		
+		WiecznyStudent wiecznyStudent = new WiecznyStudent("Robert", "Niez³omny", 22, "robert.niezlomny@wp.pl", Utils.stworzAdres(), 1);
+		Utils.przywitaj("Dzieñ dobry ", wiecznyStudent);
+		
+		System.out.println("Czy email w1 jest poprawny? "+w2.czyPoprawnyEmail());
+		System.out.println("Czy email s jest poprawny? "+s.czyPoprawnyEmail());
+		
 
+		System.out.println(s);
+		
 	}
 }

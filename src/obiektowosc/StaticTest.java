@@ -81,10 +81,12 @@ public class StaticTest {
 		int[] liczby= {2,5,2,2,6,6,6,6};
 		System.out.println(Utils.suma(liczby));
 		
+		Adres adres = new Adres("Koœciuszki", 22, 1, "44-111");
+		
 		String tekstPrzywitania = "Witajcie, Panie ";
-		Wykladowca w1 = new Wykladowca("Karol");
-		Wykladowca w2 = new Wykladowca("Marek");
-		Wykladowca w3 = new Wykladowca("Wojtek");
+		Wykladowca w1 = new Wykladowca("Karol", "Nowak", 55, "karol.nowak@wp.pl", adres, 6123.5);
+		Wykladowca w2 = new Wykladowca("Marek", "Kowalski", 34, "marek.kowalski@gmail.com", adres, 2222.55);
+		Wykladowca w3 = new Wykladowca("Wojtek", "Król", 73, "wojetek.krol@onet.pl", adres, 15000);
 		Utils.przywitaj(tekstPrzywitania, w1, w2, w3);
 		
 	}
