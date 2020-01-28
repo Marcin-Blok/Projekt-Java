@@ -30,7 +30,7 @@ public class Plywak extends Sportowiec {
 	}
 	
 	public void trenuj () {
-		
+		System.out.println("P³ywam...");
 	};
 
 }

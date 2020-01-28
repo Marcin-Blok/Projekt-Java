@@ -21,7 +21,5 @@ public class Trening {
 	public void setTerminTreningu(LocalDateTime terminTreningu) {
 		this.terminTreningu = terminTreningu;
 	}
-	
-	
 
 }

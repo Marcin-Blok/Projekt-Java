@@ -31,7 +31,7 @@ public class Biegacz extends Sportowiec {
 	}
 	
 	public void trenuj() {
-		
+		System.out.println("Biegam...");
 	};
 
 }

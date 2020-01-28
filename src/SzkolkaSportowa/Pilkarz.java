@@ -20,7 +20,7 @@ public class Pilkarz extends Sportowiec {
 	}
 
 	public void trenuj() {
-
+		System.out.println("Gram...");
 	};
 
 }
