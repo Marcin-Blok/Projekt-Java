@@ -28,4 +28,11 @@ public class Klub {
 		this.dataZalozenia = dataZalozenia;
 	}
 
+	@Override
+	public String toString() {
+		return "Aktualny klub: " + nazwa + " "  + dataZalozenia;
+	}
+	
+	
+
 }
