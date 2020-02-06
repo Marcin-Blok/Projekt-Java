@@ -128,20 +128,42 @@ public class ObiektowoscDemo {
 		
 		
 		// typy sparametryzowane
-		Podium<Samochod> podmiumSamochod = new Podium<Samochod>();
-		podmiumSamochod.setPierwsze(new SamochodOsobowy("czerwony", "BMW", 222, 1.2));
-		podmiumSamochod.setDrugie(new SamochodOsobowy("zielony", "BMW", 222, 1.2));
-		podmiumSamochod.setTrzecie(new SamochodOsobowy("niebieski", "BMW", 222, 1.2));
+		Podium<Samochod> podiumSamochod = new Podium<Samochod>();
+		podiumSamochod.setPierwsze(new SamochodOsobowy("czerwony", "BMW", 222, 1.2));
+		podiumSamochod.setDrugie(new SamochodOsobowy("zielony", "BMW", 222, 1.2));
+		podiumSamochod.setTrzecie(new SamochodOsobowy("niebieski", "BMW", 222, 1.2));
 		
 		Podium<Student> podiumStudent = new Podium<Student>();
 		podiumStudent.setPierwsze(new Student("Marian", "X", 12, "", adres, 2));
 		podiumStudent.setDrugie(Utils.stworzStudenta());
 		podiumStudent.setTrzecie(new Student("Karol", "Z", 22, "", adres, 12));
 		
+		Student s1 = new Student("Marian", "X", 12, "", adres, 2);
+		Student s2 = Utils.stworzStudenta();
+		Student s3 = new Student("Karol", "Z", 22, "", adres, 12);
+		Podium<?> podium = new Podium<Student>(s1, s2, s3, 1500);
+		podium = podiumSamochod;
+		
 		
 		System.out.println(podiumStudent.getPierwsze().numerAkademika);
-		System.out.println(podmiumSamochod.getPierwsze().kolor);
+		System.out.println(podiumSamochod.getPierwsze().kolor);
 		
+		Utils.wyswietlWynikiArgumentWieloznaczny(podiumSamochod, podiumStudent);
+		Utils.wyswietlWynikiArgumentWieloznaczny(podiumSamochod, podiumSamochod);
+		Utils.wyswietlWynikiArgumentWieloznaczny(podiumSamochod, podiumSamochod, podiumSamochod, podiumSamochod, podiumSamochod, podiumSamochod, podiumSamochod, podiumSamochod);
+
+		
+		System.out.println("------ object --------");
+		Utils.wyswietlWynikiArgumentObject(podiumSamochod, podiumSamochod);
+		
+		
+		PodiumObject podiumObjectSamochod = new PodiumObject();
+		podiumObjectSamochod.setPierwsze(new SamochodOsobowy("czerwony", "BMW", 222, 1.2));
+		podiumObjectSamochod.setDrugie(new Student("Karol", "Z", 22, "", adres, 12));
+		podiumObjectSamochod.setTrzecie(new Prysznic());
+		
+//		Przyk³ad problemów jakie wystêpowa³y, gdy nie by³o typów sparametryzowanych
+//		Utils.wyswietlWynikiArgumentObject(podiumObjectSamochod, new Object());
 		
 	}
 }

@@ -63,6 +63,10 @@ public abstract class Samochod implements SamochodOperacje, Radio, SkrzyniaBiego
 		System.out.println("Zmieniam bieg w samochodzie.");
 	}
 	
+	@Override
+	public String toString() {
+		return "marka: "+marka;
+	}
 
 	
 }

@@ -4,6 +4,18 @@ public class Podium<T extends Zawody> {
 	private T pierwsze;
 	private T drugie;
 	private T trzecie;
+	
+
+	public Podium() {
+		super();
+	}
+
+	public <V extends Number> Podium(T pierwsze, T drugie, T trzecie, V nagroda) {
+		super();
+		this.pierwsze = pierwsze;
+		this.drugie = drugie;
+		this.trzecie = trzecie;
+	}
 
 	public T getPierwsze() {
 		return pierwsze;
@@ -27,6 +39,11 @@ public class Podium<T extends Zawody> {
 
 	public void setTrzecie(T trzecie) {
 		this.trzecie = trzecie;
+	}
+	
+	@Override
+	public String toString() {
+		return pierwsze+" "+pierwsze.cieszynka()+"\n"+drugie+" "+drugie.cieszynka()+"\n"+trzecie+" "+trzecie.cieszynka()+"\n";
 	}
 
 }

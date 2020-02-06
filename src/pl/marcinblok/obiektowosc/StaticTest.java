@@ -99,5 +99,8 @@ public class StaticTest {
 		
 		System.out.println("dodawanie: "+Utils.dodaj(2, 2));
 		System.out.println("dodawanie: "+Utils.dodaj(2.2f, 2.2f));
+		
+		
+		
 	}
 }

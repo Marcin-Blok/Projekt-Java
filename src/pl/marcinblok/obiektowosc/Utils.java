@@ -83,4 +83,26 @@ public final class Utils {
 		
 	}
 	
+	
+	static void wyswietlWyniki(Podium<Samochod> p1, Podium<Student> p2) {
+		System.out.println(p1);
+		System.out.println(p2);
+	}
+	
+	static void wyswietlWynikiArgumentWieloznaczny(Podium<?> p1, Podium<?> p2) {
+		System.out.println(p1);
+		System.out.println(p2);
+	}
+	
+	static void wyswietlWynikiArgumentObject(Object p1, Object p2) {
+		System.out.println(p1);
+		System.out.println(p2);
+	}
+	
+	static void wyswietlWynikiArgumentWieloznaczny(Podium<?> ... podia) {
+		for(Podium<?> podium : podia) {
+			System.out.println(podium);
+		}
+	}
+	
 }
