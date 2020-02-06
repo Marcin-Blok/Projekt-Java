@@ -1,6 +1,6 @@
 package pl.marcinblok.obiektowosc;
 
-public class Student extends Osoba {
+public class Student extends Osoba implements Zawody {
 	protected int numerAkademika;
 
 	public Student(String imie, String nazwisko, int wiek, String email, Adres adres, int numerAkademika) {

@@ -7,12 +7,12 @@ public class ObiektowoscDemo {
 		// deklaracja obiektu
 		Samochod prywatny;
 		// alokacja obiektu
-		prywatny = new Samochod("zielony", "mercedes", 123_123, 15000);
+		prywatny = new SamochodOsobowy("zielony", "mercedes", 123_123, 15000.0);
 		prywatny.info();
 
 		System.out.println("-------------------");
 
-		Samochod testowy = new Samochod();
+		Samochod testowy = new SamochodOsobowy();
 		testowy.kolor = "czerwony";
 		testowy.info();
 
@@ -125,6 +125,23 @@ public class ObiektowoscDemo {
 		
 
 		System.out.println(s);
+		
+		
+		// typy sparametryzowane
+		Podium<Samochod> podmiumSamochod = new Podium<Samochod>();
+		podmiumSamochod.setPierwsze(new SamochodOsobowy("czerwony", "BMW", 222, 1.2));
+		podmiumSamochod.setDrugie(new SamochodOsobowy("zielony", "BMW", 222, 1.2));
+		podmiumSamochod.setTrzecie(new SamochodOsobowy("niebieski", "BMW", 222, 1.2));
+		
+		Podium<Student> podiumStudent = new Podium<Student>();
+		podiumStudent.setPierwsze(new Student("Marian", "X", 12, "", adres, 2));
+		podiumStudent.setDrugie(Utils.stworzStudenta());
+		podiumStudent.setTrzecie(new Student("Karol", "Z", 22, "", adres, 12));
+		
+		
+		System.out.println(podiumStudent.getPierwsze().numerAkademika);
+		System.out.println(podmiumSamochod.getPierwsze().kolor);
+		
 		
 	}
 }

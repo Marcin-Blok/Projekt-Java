@@ -2,14 +2,14 @@ package pl.marcinblok.obiektowosc;
 
 public class StaticTest {
 	public static void main(String[] args) {
-		Samochod s1 = new Samochod();
+		Samochod s1 = new SamochodOsobowy();
 		System.out.println(Samochod.liczbaSamochod);
 		
-		Samochod s2 = new Samochod();
-		Samochod s3 = new Samochod();
-		Samochod s4 = new Samochod();
-		Samochod s5 = new Samochod();
-		Samochod s6 = new Samochod();
+		Samochod s2 = new SamochodOsobowy();
+		Samochod s3 = new SamochodOsobowy();
+		Samochod s4 = new SamochodOsobowy();
+		Samochod s5 = new SamochodOsobowy();
+		Samochod s6 = new SamochodOsobowy();
 		
 		System.out.println(Samochod.liczbaSamochod);
 		
@@ -89,5 +89,15 @@ public class StaticTest {
 		Wykladowca w3 = new Wykladowca("Wojtek", "Król", 73, "wojetek.krol@onet.pl", adres, 15000);
 		Utils.przywitaj(tekstPrzywitania, w1, w2, w3);
 		
+	
+		System.out.println("Suma 1+2+3: "+Utils.sum(1, 2, 3));
+
+		System.out.println("Suma 1, 2, 3, 4, 2, 1,4: "+Utils.sum(1, 2, 3, 4, 2, 1,4));	
+
+		System.out.println("Suma 1f, 22.3f, 11.2f: "+Utils.sum(1f, 22.3f, 11.2f));
+		
+		
+		System.out.println("dodawanie: "+Utils.dodaj(2, 2));
+		System.out.println("dodawanie: "+Utils.dodaj(2.2f, 2.2f));
 	}
 }

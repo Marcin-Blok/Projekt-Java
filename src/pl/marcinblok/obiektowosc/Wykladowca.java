@@ -21,4 +21,9 @@ public class Wykladowca extends Osoba {
 		return " jest wyk³adowc¹.";
 	}
 	
+	@Override
+	public String toString() {
+		return getImie() + " " + getNazwisko();
+	}
+	
 }

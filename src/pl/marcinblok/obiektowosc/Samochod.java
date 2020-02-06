@@ -1,6 +1,6 @@
 package pl.marcinblok.obiektowosc;
 
-public abstract class Samochod implements SamochodOperacje, Radio, SkrzyniaBiegow {
+public abstract class Samochod implements SamochodOperacje, Radio, SkrzyniaBiegow, Zawody {
 	String kolor;
 	String marka;
 	int przebieg;
@@ -12,7 +12,7 @@ public abstract class Samochod implements SamochodOperacje, Radio, SkrzyniaBiego
 		liczbaSamochod++;
 	}
 
-	Samochod(String kolor, String marka, int przebieg, double cena) {
+	public Samochod(String kolor, String marka, int przebieg, double cena) {
 		this.kolor = kolor;
 		this.marka = marka;
 		this.przebieg = przebieg;
@@ -58,7 +58,11 @@ public abstract class Samochod implements SamochodOperacje, Radio, SkrzyniaBiego
 		
 	}
 
-	public abstract void zmien();
+	@Override
+	public void zmien() {
+		System.out.println("Zmieniam bieg w samochodzie.");
+	}
+	
 
 	
 }

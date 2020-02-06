@@ -3,7 +3,7 @@ package pl.marcinblok.obiektowosc;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
-public class Utils {
+public final class Utils {
 	private static final String DATA_FORMAT = "dd MMM yyyy";
 	public static final int AKTYWNY = 1;
 	public static final double PI = 3.14;
@@ -53,6 +53,28 @@ public class Utils {
 		
 		return sum;
 	}
+	
+	static <T extends Number> long sum(T ... elementy) {
+		long sum = 0;
+		for(T e : elementy) {
+			sum += e.longValue();
+		}
+		return sum;
+	}
+	
+	
+//	static int dodaj(int a, int b) {
+//		return a+b;
+//	}
+//	
+//	static float dodaj(float a, float b) {
+//		return a+b;
+//	}
+	
+	static <T extends Number> float dodaj(T a, T b) {
+		return a.floatValue()+b.floatValue();
+	}
+	
 	
 	static void przywitaj(String tekstPowitania, Osoba ... osoby) {
 		for(Osoba osoba : osoby) {
