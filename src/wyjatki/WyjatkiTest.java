@@ -1,7 +1,11 @@
 package wyjatki;
 
+import java.lang.Math;
+
 public class WyjatkiTest {
 	public static void main(String[] args) {
+
+		// obs³u¿enie wyj¹tku bezpoœrednio po bloku obserwowanym
 		System.out.println("Rozpoczynam dzia³anie programu.");
 
 		try {
@@ -15,9 +19,67 @@ public class WyjatkiTest {
 			System.out.println("Nie mo¿na dzieliæ przez zero. Nie wykona³em operacji.");
 		} catch (ArrayIndexOutOfBoundsException e) {
 			System.out.println("Brak elementu tablicy. Wyszed³eœ poza zakres");
+		} finally {
+			System.out.println("Zawsze wykonam ten kawa³ek kodu.");
 		}
 
 		System.out.println("Zakoñczenie dzia³ania programu.");
+
+		
+		
+		/**********************************************************/
+		// wyowo³anie metody rzucaj¹cej wyj¹tek
+		System.out.println("Wynik dzielenia 5/2 = " + wyjatki.Utils.div(5, 2));
+
+		try {
+			System.out.println("Wynik dzielenia 55/0 = " + wyjatki.Utils.div(55, 0));
+			// zapis do pliku....
+		} catch (ArithmeticException e) {
+			System.out.println("Nie mogê podzieliæ prez 0.");
+			// ... brak pamiêci
+		} catch (Exception e) { // od szczegó³u do ogó³u
+
+		} finally {
+			// zamkniêcie pliku
+		}
+		
+		
+		
+		
+		
+		/**********************************************************/
+		// tworzenie w³asnych wyj¹tków
+		
+		// przygotwanie produktów
+		Produkt p1 = new Produkt("Kompendium Programisty", 100);
+		Produkt p2 = new Produkt("Kubek", 22);
+		Produkt p3 = new Produkt("Woda mineralna", 1);
+		
+		Produkt[] magazyn = new Produkt[3];
+		magazyn[0] = p1;
+		magazyn[1] = p2;
+		magazyn[2] = p3;
+		
+		// zakup - wybór produktów do kupienia
+		Produkt[] chceKupic = new Produkt[2];
+		chceKupic[0] = new Produkt("Woda mineralna", 1);
+		chceKupic[1] = new Produkt("Kubek", 22222);
+		
+		Koszyk koszyk = new Koszyk(chceKupic);
+		
+		
+		// zakup - p³atnoœæ
+		try {
+			Utils.sprawdzDostepnosc(magazyn, koszyk);
+		} catch (BrakProduktu e) {
+			System.out.println(e.getMessage());
+		}
+		
+		
+		
+		
+		
+
 	}
 
 	public static boolean getRandomBoolean() {
