@@ -54,11 +54,13 @@ public class WyjatkiTest {
 		Produkt p1 = new Produkt("Kompendium Programisty", 100);
 		Produkt p2 = new Produkt("Kubek", 22);
 		Produkt p3 = new Produkt("Woda mineralna", 1);
+		Produkt p4 = new Produkt("Szafka biurowa", 1000);
 		
-		Produkt[] magazyn = new Produkt[3];
+		Produkt[] magazyn = new Produkt[4];
 		magazyn[0] = p1;
 		magazyn[1] = p2;
 		magazyn[2] = p3;
+		magazyn[3] = p4;
 		
 		// zakup - wybór produktów do kupienia
 		Produkt[] chceKupic = new Produkt[2];
@@ -75,11 +77,22 @@ public class WyjatkiTest {
 			System.out.println(e.getMessage());
 		}
 		
+		// typy opakowuj¹ce
+		Integer i = new Integer(12);
+		Integer i1 = Integer.valueOf(22);
 		
+		int a = 1;
+		Integer i2 = Integer.valueOf(a);
 		
+		String s = "12";
+		Integer j = Integer.parseInt(s);
 		
+		System.out.println(j);
 		
-
+		boolean wartosc = true;
+		Boolean wartoscB = Boolean.valueOf(wartosc);
+		boolean wartosc2 = wartoscB.booleanValue();
+		
 	}
 
 	public static boolean getRandomBoolean() {
