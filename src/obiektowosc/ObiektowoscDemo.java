@@ -126,5 +126,23 @@ public class ObiektowoscDemo {
 
 		System.out.println(s);
 		
+		System.out.println("------------------14-01-2020----------------------------");
+		
+		
+		Kadry kadry = new Kadry();
+		Pracownik pracownik = new Pracownik("Marian ", "Parady¿", 3400, 'M', 1);
+		Pracownik pracownik2 = new Pracownik("Jola ", "Siemiak", 4400, 'K', 2);
+		Pracownik pracownik3 = new Pracownik("Tomasz ", "Wajda", 4200, 'M', 1);
+		kadry.dodajPracownika(pracownik);
+		kadry.dodajPracownika(pracownik2);
+		kadry.dodajPracownika(pracownik3);
+		kadry.pisz();
+		kadry.sredniZarobek();
+		
+		int dzial = 2;
+		double sredniPlaca = kadry.sredniZarobek(dzial);
+		System.out.println("Œrednia p³aca dzia³u: " + dzial + " wynosi: " + sredniPlaca);
+		
+		
 	}
 }
