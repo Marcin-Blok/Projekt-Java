@@ -1,4 +1,4 @@
-package MiniSklepZadanie;
+package minisklepzadanie;
 
 import java.util.Arrays;
 
@@ -15,7 +15,6 @@ public class Koszyk {
 	}
 
 
-
 	public Produkt[] getProdukty() {
 		return produkty;
 	}
@@ -29,5 +28,12 @@ public class Koszyk {
 		return "Wybrane produkty " + Arrays.toString(produkty);
 	}
 
-	
+	public double kosztProduktow() {
+		double koszt = 0;
+		for(int i = 0; i < produkty.length; i++) {
+			koszt += produkty[i].getIlosc() * produkty[i].getCena();
+		}
+		return koszt;
+
+	}
 }

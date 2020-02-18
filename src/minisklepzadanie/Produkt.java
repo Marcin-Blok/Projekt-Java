@@ -1,14 +1,16 @@
-package MiniSklepZadanie;
+package minisklepzadanie;
 
 public class Produkt {
 	private String nazwa;
 	private int ilosc;
 	private double cena;
+	private int liczbaZarezerwowanych;
 
 	public Produkt(String nazwa, int ilosc, double cena) {
 		this.nazwa = nazwa;
 		this.ilosc = ilosc;
 		this.cena = cena;
+		this.liczbaZarezerwowanych = 0;
 	}
 
 	public String getNazwa() {
@@ -35,12 +37,21 @@ public class Produkt {
 		this.cena = cena;
 	}
 
+	public int getLiczbaZarezerwowanych() {
+		return liczbaZarezerwowanych;
+	}
+
+	public void setLiczbaZarezerwowanych(int liczbaZarezerwowanych) {
+		this.liczbaZarezerwowanych = liczbaZarezerwowanych;
+	}
+	
+	public void zarezerwuj(int ilosc) {
+		liczbaZarezerwowanych+=ilosc;
+	}
+
 	@Override
 	public String toString() {
 		return nazwa + ", ilosc " + ilosc + ", cena " + cena;
 	}
 
-	
-	
-	
 }

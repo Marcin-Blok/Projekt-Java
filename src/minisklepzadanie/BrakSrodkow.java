@@ -1,4 +1,4 @@
-package MiniSklepZadanie;
+package minisklepzadanie;
 
 public class BrakSrodkow extends Exception{
 	

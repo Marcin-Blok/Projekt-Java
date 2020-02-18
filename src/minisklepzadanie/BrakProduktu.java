@@ -1,4 +1,4 @@
-package MiniSklepZadanie;
+package minisklepzadanie;
 
 public class BrakProduktu extends Exception {
 	public BrakProduktu() {
