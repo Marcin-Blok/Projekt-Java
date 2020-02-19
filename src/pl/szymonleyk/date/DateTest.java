@@ -13,6 +13,7 @@ import java.util.Date;
 import java.util.TimeZone;
 
 import obiektowosc.Student;
+import obiektowosc.Utils;
 
 public class DateTest {
 	public static void main(String[] args) {
@@ -55,7 +56,7 @@ public class DateTest {
 
 		// dzieñ dzisiejszy
 		int liczbaSpotkan = 150;
-		Student student = new Student("Marcin", "Blok");
+		Student student = Utils.stworzStudenta();
 		LocalDateTime firstMeeting = LocalDateTime.of(LocalDate.of(2020, 01, 23), LocalTime.of(11, 00));
 		
 		// stworzy³em cykliczne spotkania na podstawie danych
@@ -86,7 +87,8 @@ public class DateTest {
 		
 		
 		// sprawdz wiek
-		LocalDate birthDate = LocalDate.of(2005, 02, 11);
+		LocalDate birthDate = LocalDate.of(1985, 01, 04);
+		
 		LocalDate currDate = LocalDate.now();
 
 		Period period = Period.between(birthDate, currDate);
@@ -97,6 +99,7 @@ public class DateTest {
 		
 		Duration d = Duration.ofHours(24);
 		System.out.println(d.toNanos());
+		
 
 	}
 }

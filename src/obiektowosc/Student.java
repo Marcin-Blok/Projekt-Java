@@ -1,42 +1,21 @@
 package obiektowosc;
 
-public class Student {
-	private String imie;
-	private String nazwisko;
-	private String email;
+public class Student extends Osoba {
+	protected int numerAkademika;
 
-	public Student(String imie, String nazwisko) {
-		this.imie = imie;
-		this.nazwisko = nazwisko;
-	}
-
-	public String getImie() {
-		return imie;
-	}
-
-	public void setImie(String imie) {
-		this.imie = imie;
-	}
-
-	public String getNazwisko() {
-		return nazwisko;
-	}
-
-	public void setNazwisko(String nazwisko) {
-		this.nazwisko = nazwisko;
-	}
-
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
+	public Student(String imie, String nazwisko, int wiek, String email, Adres adres, int numerAkademika) {
+		super(imie, nazwisko, wiek, email, adres);
+		this.numerAkademika = numerAkademika;
 	}
 
 	@Override
 	public String toString() {
-		return imie + " " + nazwisko;
+		return getImie() + " " + getNazwisko();
+	}
+	
+	@Override
+	public String kimJestem() {
+		return " jest studentem.";
 	}
 
 }

@@ -1,42 +1,24 @@
 package obiektowosc;
 
-public class Wykladowca {
-	private String imie;
-	private String nazwisko;
-	private Adres adres;
+public class Wykladowca extends Osoba {
+	private double pensja;
+	
+	public Wykladowca(String imie, String nazwisko, int wiek, String email, Adres adres, double pensja) {
+		super(imie, nazwisko, wiek, email, adres);
+		this.pensja = pensja;
+	}
 
-	Wykladowca(String imie, String nazwisko, Adres adres) {
-		this.imie = imie;
-		this.nazwisko = nazwisko;
-		this.adres = adres;
+	public double getPensja() {
+		return pensja;
+	}
+
+	public void setPensja(double pensja) {
+		this.pensja = pensja;
 	}
 	
-	Wykladowca(String imie){
-		this.imie = imie;
+	@Override
+	public String kimJestem() {
+		return " jest wyk³adowc¹.";
 	}
-
-	public String getImie() {
-		return imie;
-	}
-
-	public void setImie(String imie) {
-		this.imie = imie;
-	}
-
-	public String getNazwisko() {
-		return nazwisko;
-	}
-
-	public void setNazwisko(String nazwisko) {
-		this.nazwisko = nazwisko;
-	}
-
-	public Adres getAdres() {
-		return adres;
-	}
-
-	public void setAdres(Adres adres) {
-		this.adres = adres;
-	}
-
+	
 }
