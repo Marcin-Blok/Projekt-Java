@@ -1,11 +1,5 @@
 package obiektowosc;
 
-import lombok.Getter;
-import lombok.Setter;
-
-@Getter
-@Setter
-
 public class Kadry {
 	private Pracownik[] pracownicy;
 	private int zatrudnienie;
@@ -41,7 +35,7 @@ public class Kadry {
 
 		return sum / zatrudnienie;
 	}
-	
+
 	public double sredniZarobek(int dzial) {
 		double sum = 0;
 		int liczbaPracownikowDzialu = 0;
@@ -52,7 +46,23 @@ public class Kadry {
 			}
 		}
 
-		return sum/liczbaPracownikowDzialu;
+		return sum / liczbaPracownikowDzialu;
+	}
+
+	public Pracownik[] getPracownicy() {
+		return pracownicy;
+	}
+
+	public void setPracownicy(Pracownik[] pracownicy) {
+		this.pracownicy = pracownicy;
+	}
+
+	public int getZatrudnienie() {
+		return zatrudnienie;
+	}
+
+	public void setZatrudnienie(int zatrudnienie) {
+		this.zatrudnienie = zatrudnienie;
 	}
 
 }

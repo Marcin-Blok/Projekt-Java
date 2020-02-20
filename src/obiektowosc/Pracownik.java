@@ -1,10 +1,5 @@
 package obiektowosc;
 
-import lombok.Getter;
-import lombok.Setter;
-
-@Getter
-@Setter
 public class Pracownik {
 	private String imie;
 	private String nazwisko;
@@ -20,8 +15,6 @@ public class Pracownik {
 		this.dzial = dzial;
 	}
 
-
-
 	// Nadpisanie metody toString()
 	@Override
 	public String toString() {
@@ -34,6 +27,46 @@ public class Pracownik {
 	public boolean czyPracujeWDziale(int ktoryDzial) {
 
 		return dzial == ktoryDzial;
+	}
+
+	public String getImie() {
+		return imie;
+	}
+
+	public void setImie(String imie) {
+		this.imie = imie;
+	}
+
+	public String getNazwisko() {
+		return nazwisko;
+	}
+
+	public void setNazwisko(String nazwisko) {
+		this.nazwisko = nazwisko;
+	}
+
+	public double getPlaca() {
+		return placa;
+	}
+
+	public void setPlaca(double placa) {
+		this.placa = placa;
+	}
+
+	public char getPlec() {
+		return plec;
+	}
+
+	public void setPlec(char plec) {
+		this.plec = plec;
+	}
+
+	public int getDzial() {
+		return dzial;
+	}
+
+	public void setDzial(int dzial) {
+		this.dzial = dzial;
 	}
 
 }
