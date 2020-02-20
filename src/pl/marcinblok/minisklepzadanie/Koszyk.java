@@ -1,4 +1,4 @@
-package minisklepzadanie;
+package pl.marcinblok.minisklepzadanie;
 
 import java.util.Arrays;
 

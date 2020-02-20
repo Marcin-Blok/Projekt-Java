@@ -1,4 +1,4 @@
-package pl.szymonleyk.packagetest;
+package pl.marcinblok.packagetest;
 
 import pl.marcinblok.date.*;
 import pl.marcinblok.Pochodna;

@@ -1,4 +1,4 @@
-package minisklepzadanie;
+package pl.marcinblok.minisklepzadanie;
 
 public class Magazyn {
 	private Produkt[] produkty;

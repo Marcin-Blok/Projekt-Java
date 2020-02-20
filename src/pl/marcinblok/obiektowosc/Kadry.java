@@ -1,4 +1,4 @@
-package obiektowosc;
+package pl.marcinblok.obiektowosc;
 
 public class Kadry {
 	private Pracownik[] pracownicy;

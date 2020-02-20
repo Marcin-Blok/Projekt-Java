@@ -1,4 +1,4 @@
-package pl.szymonleyk.wyliczenia;
+package pl.marcinblok.wyliczenia;
 
 import java.io.BufferedReader;
 import java.io.IOException;

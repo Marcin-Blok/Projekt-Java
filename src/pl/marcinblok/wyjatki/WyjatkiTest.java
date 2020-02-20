@@ -1,4 +1,4 @@
-package wyjatki;
+package pl.marcinblok.wyjatki;
 
 import java.lang.Math;
 
@@ -29,10 +29,10 @@ public class WyjatkiTest {
 		
 		/**********************************************************/
 		// wyowo³anie metody rzucaj¹cej wyj¹tek
-		System.out.println("Wynik dzielenia 5/2 = " + wyjatki.Utils.div(5, 2));
+		System.out.println("Wynik dzielenia 5/2 = " + pl.marcinblok.wyjatki.Utils.div(5, 2));
 
 		try {
-			System.out.println("Wynik dzielenia 55/0 = " + wyjatki.Utils.div(55, 0));
+			System.out.println("Wynik dzielenia 55/0 = " + pl.marcinblok.wyjatki.Utils.div(55, 0));
 			// zapis do pliku....
 		} catch (ArithmeticException e) {
 			System.out.println("Nie mogê podzieliæ prez 0.");

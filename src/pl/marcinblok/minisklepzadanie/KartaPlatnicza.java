@@ -1,4 +1,4 @@
-package minisklepzadanie;
+package pl.marcinblok.minisklepzadanie;
 
 public class KartaPlatnicza {
 	private double stanKonta;

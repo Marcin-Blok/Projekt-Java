@@ -1,4 +1,4 @@
-package pl.szymonleyk.wyliczenia;
+package pl.marcinblok.wyliczenia;
 
 public class Ogloszenie {
 	String tytul;

@@ -1,4 +1,4 @@
-package minisklepzadanie;
+package pl.marcinblok.wyjatki;
 
 public class BrakProduktu extends Exception {
 	public BrakProduktu() {
@@ -6,6 +6,6 @@ public class BrakProduktu extends Exception {
 	}
 
 	public BrakProduktu(String nazwa) {
-		super("Brak produktu ( "+ nazwa +" ) w magazynie.");
+		super("Brak produktu ("+nazwa+") w magazynie.");
 	}
 }

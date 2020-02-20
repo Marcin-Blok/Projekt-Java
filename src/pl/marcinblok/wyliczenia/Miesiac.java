@@ -1,4 +1,4 @@
-package pl.szymonleyk.wyliczenia;
+package pl.marcinblok.wyliczenia;
 
 public enum Miesiac {
 	STYCZEN(1), LUTY(2), MARZEC(3);

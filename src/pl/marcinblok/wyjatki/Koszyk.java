@@ -1,4 +1,4 @@
-package wyjatki;
+package pl.marcinblok.wyjatki;
 
 public class Koszyk {
 	private Produkt[] produkty;
