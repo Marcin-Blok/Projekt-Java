@@ -1,0 +1,33 @@
+package pl.marcinblok.szkolkasportowa;
+
+import java.time.LocalDate;
+
+public class Pilkarz extends Sportowiec {
+	private String pozycjaNaBoisku;
+
+	public Pilkarz(String imie, String nazwisko, LocalDate dataUrodzenia, String dieta,
+			LocalDate dataRozpoczeciaKariery, Klub aktualnyKlub, Trener trener, String pozycjaNaBoisku) {
+		super(imie, nazwisko, dataUrodzenia, dieta, dataRozpoczeciaKariery, aktualnyKlub, trener);
+		this.pozycjaNaBoisku = pozycjaNaBoisku;
+	}
+
+	public String getPozycjaNaBoisku() {
+		return pozycjaNaBoisku;
+	}
+
+	public void setPozycjaNaBoisku(String pozycjaNaBoisku) {
+		this.pozycjaNaBoisku = pozycjaNaBoisku;
+	}
+
+	public void trenuj() {
+		System.out.println("Rozpoczynam trening pi³ki no¿nej");
+	}
+
+	@Override
+	public String toString() {
+		return ("Pozycja na boisku to: " + pozycjaNaBoisku);
+	};
+	
+	
+
+}
