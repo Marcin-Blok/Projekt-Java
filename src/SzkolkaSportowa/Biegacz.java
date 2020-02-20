@@ -31,7 +31,7 @@ public class Biegacz extends Sportowiec {
 	}
 	
 	public void trenuj() {
-		System.out.println("Biegam...");
+		System.out.println("Rozpoczynam trening,najpierw rozgrzewka, potem bieg na dystansie 10km, koñczê trening stretchingiem");
 	};
 
 }

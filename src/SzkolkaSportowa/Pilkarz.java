@@ -20,7 +20,14 @@ public class Pilkarz extends Sportowiec {
 	}
 
 	public void trenuj() {
-		System.out.println("Gram...");
+		System.out.println("Rozpoczynam trening pi³ki no¿nej");
+	}
+
+	@Override
+	public String toString() {
+		return ("Pozycja na boisku to: " + pozycjaNaBoisku);
 	};
+	
+	
 
 }

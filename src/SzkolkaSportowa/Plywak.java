@@ -30,7 +30,7 @@ public class Plywak extends Sportowiec {
 	}
 	
 	public void trenuj () {
-		System.out.println("P³ywam...");
+		System.out.println("Rozpoczynam trening krótk¹ rozgrzewk¹, potem p³ynê naprzemiennie kraulem 200m, nastêpnie na grzbiecie 300m potem ¿abk¹ 400m, nastêpnie delfinem 250m i koñczê trening ponownie kraulem 500m");
 	};
 
 }
