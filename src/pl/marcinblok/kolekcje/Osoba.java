@@ -1,6 +1,6 @@
 package pl.marcinblok.kolekcje;
 
-public class Osoba {
+public class Osoba implements Comparable<Osoba> {
 	private String imie;
 	private Status status;
 
@@ -59,6 +59,11 @@ public class Osoba {
 		} else if (!imie.equals(other.imie))
 			return false;
 		return true;
+	}
+
+	@Override
+	public int compareTo(Osoba o) {
+		return imie.compareTo(o.getImie());
 	}
 
 }

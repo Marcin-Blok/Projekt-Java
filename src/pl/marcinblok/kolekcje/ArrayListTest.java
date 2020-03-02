@@ -67,6 +67,10 @@ public class ArrayListTest {
 		
 		System.out.println(uczniowie);
 		
+		System.out.println("-------- sortowanie ----------");
+		uczniowie.sort(new OsobyComparator());
+		System.out.println(uczniowie);
+		
 		uczniowie.clear();
 		
 		System.out.println(uczniowie);
