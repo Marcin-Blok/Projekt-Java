@@ -7,7 +7,7 @@ public class ArrayListTest {
 	public static void main(String[] args) {
 		
 		ArrayList<String> imiona = new ArrayList<>();
-		
+			
 		ArrayList<Osoba> uczniowie = new ArrayList<>();
 		uczniowie.add(new Osoba("Karol"));
 		uczniowie.add(new Osoba("Jurek"));

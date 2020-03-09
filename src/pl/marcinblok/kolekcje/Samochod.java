@@ -1,6 +1,6 @@
 package pl.marcinblok.kolekcje;
 
-public class Samochod {
+public class Samochod implements Comparable<Samochod> {
 	private String marka;
 	private String model;
 	private String kolor;
@@ -12,7 +12,7 @@ public class Samochod {
 		this.model = model;
 		this.kolor = kolor;
 	}
-	
+
 	public Samochod(String marka, String model, String kolor, int rocznik) {
 		super();
 		this.marka = marka;
@@ -44,7 +44,7 @@ public class Samochod {
 	public void setKolor(String kolor) {
 		this.kolor = kolor;
 	}
-	
+
 	public int getRocznik() {
 		return rocznik;
 	}
@@ -55,7 +55,18 @@ public class Samochod {
 
 	@Override
 	public String toString() {
-		return "Samochod [marka=" + marka + ", model=" + model + ", kolor=" + kolor + ", rocznik =" + rocznik+"]\n";
+		return "Samochod [marka=" + marka + ", model=" + model + ", kolor=" + kolor + ", rocznik =" + rocznik + "]\n";
+	}
+
+	@Override
+	public int compareTo(Samochod o) {
+		if (rocznik < o.getRocznik()) {
+			return -1;
+		} else if (rocznik  == o.getRocznik()) {
+			return kolor.compareTo(o.getKolor());
+		} else {
+			return 1;
+		}
 	}
 
 }
