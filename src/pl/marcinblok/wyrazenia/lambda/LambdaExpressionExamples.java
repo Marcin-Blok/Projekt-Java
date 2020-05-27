@@ -61,10 +61,68 @@ public class LambdaExpressionExamples {
 		System.out.println(prepareMessage.some("jutrzejsze zajęcia odwołane."));
 		
 		
+		// odwrotność liczby
 		GenericFunctionalInterface<Integer> reverse = number -> -number;
 		System.out.println("Odwrotność liczby 5, to "+reverse.some(5));
 		System.out.println("Odwrotność liczby -123, to "+reverse.some(-123));
 		System.out.println("Odwrotność liczby 68, to "+reverse.some(68));
 		
+		int x = 1;
+		int y = 2;
+		runNumericTest(x,y);
+		runNumericTest(1,2);
+		
+		int z = 2;
+		runNumericTest(sum, z);
+		runNumericTest((tab) -> {
+			int result = 0;
+			for (int number : tab) {
+				result+=number;
+			}
+			return result;
+		}, z);
+		
+		
+		// wyjątki w wyrażeniach lambda
+		DataGenerator<Integer> integer = (length) -> {
+			if(length < 1 || length > 5000) {
+				throw new LengthException();
+			}
+			
+			Integer[] tab = new Integer[length];
+			for (int i = 0; i < length; i++) {
+				tab[i] = i * 13;
+			}
+			return tab;
+		};
+		
+		try {
+			Integer[] numbers = integer.generate(22);
+			for(int i : numbers) {
+				System.out.print(i);
+			}
+		} catch (LengthException e) {
+			System.out.println(e.getMessage());
+		}
+		
+		System.out.println();
+		
+		try {
+			Integer[] numbers = integer.generate(5001);
+			for(int i : numbers) {
+				System.out.print(i);
+			}
+		} catch (LengthException e) {
+			System.out.println(e.getMessage());
+		}
+	}
+
+	private static void runNumericTest(int a, int b) {
+		System.out.println(a + b);
+	}
+
+	private static void runNumericTest(TableOperation a, int b) {
+		int[] tab = { 1, 142, 12, 5, 512, 32, 132, 12, 3123 };
+		System.out.println(a.calc(tab) + b);
 	}
 }
