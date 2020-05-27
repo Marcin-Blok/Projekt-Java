@@ -20,12 +20,14 @@ public class ImmutableTest {
 		System.out.println(string.getValue());
 		zmienTekst(string);
 		System.out.println(string.getValue());
-		
+				
 
 		String string2 = new String("tekst");
-		System.out.println(string2);
+		System.out.println(string2);System.out.println();
 		zmienTekst(string2);
 		System.out.println(string2);
+
+		
 	}
 	
 	static void zmienTekst(MyString myString){
