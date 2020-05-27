@@ -48,5 +48,23 @@ public class LambdaExpressionExamples {
 		System.out.println("Ile jest parzystych? (-1231,5,0)="+countEven.calc(new int[] {-1231,5,0}));
 		
 		
+		// sparametryzowany interfejs funkcyjny
+		GenericFunctionalInterface<String> prepareMessage;
+		prepareMessage = (message) -> {
+			String head = "----------------\nWitaj,\n";
+			String footer = "\nPozdrawiam,\nSzymon";
+		
+			return head+message+footer;
+		};
+		
+		System.out.println(prepareMessage.some("dzisiaj zajęcia na 10:00."));
+		System.out.println(prepareMessage.some("jutrzejsze zajęcia odwołane."));
+		
+		
+		GenericFunctionalInterface<Integer> reverse = number -> -number;
+		System.out.println("Odwrotność liczby 5, to "+reverse.some(5));
+		System.out.println("Odwrotność liczby -123, to "+reverse.some(-123));
+		System.out.println("Odwrotność liczby 68, to "+reverse.some(68));
+		
 	}
 }
