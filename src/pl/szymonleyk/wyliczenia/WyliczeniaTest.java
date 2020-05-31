@@ -7,9 +7,9 @@ import java.io.InputStreamReader;
 public class WyliczeniaTest {
 
 	public static void main(String[] args) throws IOException {
-		Ogloszenie o1 = new Ogloszenie("Lokal biurowy w œcis³ym centrum ¯or",
-				"Budynek naprzeciwko Koœcio³a Ewangelickiego - œcis³e centrum ¯or!\r\n" + "\r\n"
-						+ "Op³ata obejmuje media (c.o., pr¹d, wod-kan., internet) oraz parking.\r\n" + "\r\n"
+		Ogloszenie o1 = new Ogloszenie("Lokal biurowy w ï¿½cisï¿½ym centrum ï¿½or",
+				"Budynek naprzeciwko Koï¿½cioï¿½a Ewangelickiego - ï¿½cisï¿½e centrum ï¿½or!\r\n" + "\r\n"
+						+ "Opï¿½ata obejmuje media (c.o., prï¿½d, wod-kan., internet) oraz parking.\r\n" + "\r\n"
 						+ "Podana cena to cena brutto (fa vat 23%).",
 				TypNieruchomosci.BIURO);
 
@@ -22,8 +22,8 @@ public class WyliczeniaTest {
 
 		/******** valueOf() **/
 		String typ = "MIESZKANIE";
-		Ogloszenie o2 = new Ogloszenie("1 bdrm Amazing apartment for rent Z³ota 44",
-				"Apartament z widokiem na panoramê stolicy przypadnie do gustu osobom wybieraj¹cym dobra z najwy¿szej pó³ki. Luksus w czystej postaci. Z³ota 44 to najbardziej presti¿owa warszawska inwestycja, oferuj¹ca swoim mieszkañcom pe³en wachlarz udogodnieñ.",
+		Ogloszenie o2 = new Ogloszenie("1 bdrm Amazing apartment for rent Zï¿½ota 44",
+				"Apartament z widokiem na panoramï¿½ stolicy przypadnie do gustu osobom wybierajï¿½cym dobra z najwyï¿½szej pï¿½ki. Luksus w czystej postaci. Zï¿½ota 44 to najbardziej prestiï¿½owa warszawska inwestycja, oferujï¿½ca swoim mieszkaï¿½com peï¿½en wachlarz udogodnieï¿½.",
 				TypNieruchomosci.valueOf(typ));
 
 		System.out.println(o2);
@@ -42,17 +42,17 @@ public class WyliczeniaTest {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
 		do {
-			System.out.print("Typ nieruchomoœci: ");
+			System.out.print("Typ nieruchomoï¿½ci: ");
 			String typNieruchomosci = br.readLine();
 
 			try {
 				TypNieruchomosci typNieruchomosciEnum = TypNieruchomosci.valueOf(typNieruchomosci);
 				
 				switch (typNieruchomosciEnum) {
-				case MIESZKANIE: System.out.println("Wybra³eœ mieszkanie"); break;
-				case DOM: System.out.println("Wybra³eœ dom"); break;
-				case BIURO: System.out.println("Wybra³eœ biuro"); break;
-				case DZIA£KA: System.out.println("Wybra³eœ dzia³kê"); break;
+				case MIESZKANIE: System.out.println("Wybraï¿½eï¿½ mieszkanie"); break;
+				case DOM: System.out.println("Wybraï¿½eï¿½ dom"); break;
+				case BIURO: System.out.println("Wybraï¿½eï¿½ biuro"); break;
+				case DZIACKA: System.out.println("Wybraï¿½eï¿½ dziaï¿½kï¿½"); break;
 				default:
 					throw new IllegalArgumentException("Unexpected value: " + typNieruchomosciEnum);
 				}

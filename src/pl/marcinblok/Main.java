@@ -18,9 +18,9 @@ class Main {
 		int wiek = 15;
 
 		if (wiek >= 18) {
-			System.out.println("Informajca dla osoby pe³noletniej");
+			System.out.println("Informajca dla osoby peï¿½noletniej");
 		} else {
-			System.out.println("Nie spe³niony warunek");
+			System.out.println("Nie speï¿½niony warunek");
 		}
 
 		// sumowanie liczb parzystych
@@ -47,14 +47,14 @@ class Main {
 
 		wiek = 8;
 		if (waga > 50 && wiek < 10) {
-			System.out.println("Trochê du¿o wa¿ysz.");
+			System.out.println("Trochï¿½ duï¿½o waï¿½ysz.");
 		} else if (waga > 50 && wiek >= 10) {
 			System.out.println("Jest OK.");
 		}
 
 		if (waga > 50) {
 			if (wiek < 10) {
-				System.out.println("Trochê du¿o wa¿ysz");
+				System.out.println("Trochï¿½ duï¿½o waï¿½ysz");
 			} else {
 				System.out.println("Jest OK.");
 			}
@@ -77,7 +77,7 @@ class Main {
 		int miesiac = 3;
 		switch (miesiac) {
 		case 1:
-			System.out.println("Styczeñ");
+			System.out.println("Styczeï¿½");
 			break;
 		case 2:
 			System.out.println("Luty");
@@ -90,40 +90,40 @@ class Main {
 			break;
 
 		default:
-			System.out.println("Nie znam takiego miesi¹ca.");
+			System.out.println("Nie znam takiego miesiï¿½ca.");
 			break;
 		}
 
-		System.out.println("---------- miesi¹ce bez break");
+		System.out.println("---------- miesiï¿½ce bez break");
 		// switch bez break;
 		miesiac = 5;
 		switch (miesiac) {
 		case 1:
 		case 2:
 		case 3:
-			System.out.println("Pierwszy kwarta³.");
+			System.out.println("Pierwszy kwartaï¿½.");
 			break;
 		case 4:
 		case 5:
 		case 6:
-			System.out.println("Drugi kwarta³");
+			System.out.println("Drugi kwartaï¿½");
 			break;
 
 		default:
-			System.out.println("Nie znam takiego miesi¹ca.");
+			System.out.println("Nie znam takiego miesiï¿½ca.");
 		}
 
-		System.out.println("Koñczê program.");
+		System.out.println("Koï¿½czï¿½ program.");
 
 		// instrukcje iteracyjne
 		// while, do while, for
 		wiek = 1;
 		while (wiek <= 100) {
-			System.out.print("Twój wiek to: " + wiek);
+			System.out.print("Twï¿½j wiek to: " + wiek);
 			if (wiek >= 18) {
-				System.out.println(". Jesteœ pe³noletni.");
+				System.out.println(". Jesteï¿½ peï¿½noletni.");
 			} else {
-				System.out.println(". Jesteœ niepe³noletni.");
+				System.out.println(". Jesteï¿½ niepeï¿½noletni.");
 			}
 
 			wiek++;
@@ -138,9 +138,9 @@ class Main {
 			System.out.println("Wylosowana liczba: " + liczbaLosowa);
 			ileRazyLosowalem++;
 		}
-		System.out.println("Uda³o siê znalezc po " + ileRazyLosowalem + " próbach.");
+		System.out.println("Udaï¿½o siï¿½ znalezc po " + ileRazyLosowalem + " prï¿½bach.");
 
-		// pêtla do while
+		// pï¿½tla do while
 
 		int liczbaLosowa2;
 		do {
@@ -150,27 +150,27 @@ class Main {
 
 //		// while
 //		while (warunek) {
-//			cia³o;
+//			ciaï¿½o;
 //		}
 //		
 //		// do while
 //		do {
-//			cia³o;
+//			ciaï¿½o;
 //		} while (warunek);
 
 		// suma liczb z tablicy
 		int[] tablicaLiczb = { 22, 55, 12, 52, 15, 6, 8, 9, 3, 1, 2, 3, 4, 5, 100, 200, 300, 400, 500 };
 		int[] tablicaLiczb2 = { 1, 2, 3, 4, 5, 6, 7, 8 };
 
-		System.out.println("D³ugoœæ tablicy: " + tablicaLiczb.length);
-		// wyœwietl wszystkie elementy tablicy
+		System.out.println("Dï¿½ugoï¿½ï¿½ tablicy: " + tablicaLiczb.length);
+		// wyï¿½wietl wszystkie elementy tablicy
 
 		int suma = 0;
 		for (int i = 0; i < tablicaLiczb.length; i++) {
 			// System.out.println(tablicaLiczb[i]);
 			suma += tablicaLiczb[i];
 		}
-		System.out.println("Suma elementów tablicy jest równa " + suma);
+		System.out.println("Suma elementï¿½w tablicy jest rï¿½wna " + suma);
 
 		for (int i = 0; i < tablicaLiczb.length; i++) {
 			if (tablicaLiczb[i] % 5 == 0) {
@@ -211,7 +211,7 @@ class Main {
 
 		}
 
-		// Oblicz rabat od kwoty zakupów i wyœwietl wartoœæ
+		// Oblicz rabat od kwoty zakupï¿½w i wyï¿½wietl wartoï¿½ï¿½
 
 		double amount = 19;
 		String discount = "";
@@ -228,16 +228,16 @@ class Main {
 			amountToBePaid = amount - (amount * 0.50);
 		} else {
 			System.out.println(
-					"Wartoœæ twoich zakupów jest zbyt ma³a aby uzyskaæ rabat, wybierz coœ jeszcze aby uzyskaæ zni¿kê.");
+					"Wartoï¿½ï¿½ twoich zakupï¿½w jest zbyt maï¿½a aby uzyskaï¿½ rabat, wybierz coï¿½ jeszcze aby uzyskaï¿½ zniï¿½kï¿½.");
 		}
 
 		if (amount >= 20) {
 
-			System.out.println("Przys³uguje ci rabat w wysokoœci " + discount);
-			System.out.println("Kwota do zap³aty po rabacie wynosi: " + amountToBePaid + "z³");
+			System.out.println("Przysï¿½uguje ci rabat w wysokoï¿½ci " + discount);
+			System.out.println("Kwota do zapï¿½aty po rabacie wynosi: " + amountToBePaid + "zï¿½");
 		}
 
-		// Pêtla for
+		// Pï¿½tla for
 
 		int i, j;
 		for (i = 0; i <= 3; i++) {
@@ -282,14 +282,14 @@ class Main {
 		}
 
 		/*
-		 * z = 0, x = [0-4], row = 3, column 5 te wszystie wyœwietlam z = 1, x = [0-4]
-		 * [1,0] [1,4] ile wstawi³em ? 1 5 - 1 = 4 // column - z // 4 z = 2, x = [0-4]
-		 * [2,0][2,1] [2,3][2,4] ile wstawi³em na koñcu? 2 5-2 = 3 5-1 = 4
+		 * z = 0, x = [0-4], row = 3, column 5 te wszystie wyï¿½wietlam z = 1, x = [0-4]
+		 * [1,0] [1,4] ile wstawiï¿½em ? 1 5 - 1 = 4 // column - z // 4 z = 2, x = [0-4]
+		 * [2,0][2,1] [2,3][2,4] ile wstawiï¿½em na koï¿½cu? 2 5-2 = 3 5-1 = 4
 		 *
 		 * 
 		 */
 
-		// 3. Zdefiniuj tablicê dwuwymiarow¹ i przypisz do niej wartoœci
+		// 3. Zdefiniuj tablicï¿½ dwuwymiarowï¿½ i przypisz do niej wartoï¿½ci
 
 		int array1[][] = {
 
@@ -369,10 +369,10 @@ class Main {
 			System.out.println();
 		}
 
-// 1. Dla podanej tablicy ocen, oblicz ich œredni¹
-// 2. Wyœwietl najwy¿sz¹ ocenê
-// 3. Wyœwietl najmniejsz¹ ocenê
-// 4. Które oceny przewa¿aj¹ ?
+// 1. Dla podanej tablicy ocen, oblicz ich ï¿½redniï¿½
+// 2. Wyï¿½wietl najwyï¿½szï¿½ ocenï¿½
+// 3. Wyï¿½wietl najmniejszï¿½ ocenï¿½
+// 4. Ktï¿½re oceny przewaï¿½ajï¿½ ?
 
 		int ileJestJedynek = 0;
 		int ocena = 1;
@@ -390,7 +390,7 @@ class Main {
 
 		}
 		sredniaWartosc = sumaOcen / oceny.length;
-		System.out.printf("Œrednia wartoœæ elementów tablicy jest równa %.2f", sredniaWartosc);
+		System.out.printf("ï¿½rednia wartoï¿½ï¿½ elementï¿½w tablicy jest rï¿½wna %.2f", sredniaWartosc);
 		System.out.println();
 
 		// Zadanie2
@@ -403,11 +403,11 @@ class Main {
 				najwyzszaOcena = wartoscZTablicy;
 			}
 		}
-		System.out.println("Najwy¿sza wartoœæ zdefiniowanej tablicy wynosi: " + najwyzszaOcena);
+		System.out.println("Najwyï¿½sza wartoï¿½ï¿½ zdefiniowanej tablicy wynosi: " + najwyzszaOcena);
 		System.out.println();
 
 		// Zadanie3
-		System.out.println("Zadanie 3 z wykorzystaniem pêtli foreach.");
+		System.out.println("Zadanie 3 z wykorzystaniem pï¿½tli foreach.");
 
 		int najnizszaOcena = 6;
 		int[] oceny3 = { 4, 5, 6, 4, 3, 4, 5, 6 };
@@ -416,11 +416,11 @@ class Main {
 				najnizszaOcena = wartoscZTablicy;
 			}
 		}
-		System.out.println("Najni¿sza wartoœæ zdefiniowanej tablicy wynosi: " + najnizszaOcena);
+		System.out.println("Najniï¿½sza wartoï¿½ï¿½ zdefiniowanej tablicy wynosi: " + najnizszaOcena);
 
 		System.out.println();
 
-		System.out.println("Zadanie 3.1 z wykorzystaniem pêtli for.");
+		System.out.println("Zadanie 3.1 z wykorzystaniem pï¿½tli for.");
 
 		int k = 0;
 		int lowestValue = 6;
@@ -430,7 +430,7 @@ class Main {
 				lowestValue = tabValue[k];
 			}
 		}
-		System.out.println("Najni¿sza wartoœæ zdefiniowanej tablicy wynosi: " + lowestValue);
+		System.out.println("Najniï¿½sza wartoï¿½ï¿½ zdefiniowanej tablicy wynosi: " + lowestValue);
 
 		System.out.println();
 
@@ -438,7 +438,7 @@ class Main {
 
 		int index;
 		int[] iloscOcen = new int[6];
-		int najwiêkszaIloœæOcenWTablicy = 0;
+		int najwiekszaIloscOcenWTablicy = 0;
 		int[] tablicaOcen = { 5, 4, 4, 6, 4, 3, 2, 2, 1, 6, 3, 5, 5, 5, 5, 5 };
 
 		for (index = 0; index < tablicaOcen.length; index++) {
@@ -466,20 +466,20 @@ class Main {
 
 		System.out.println(iloscOcen[3]);
 
-		int indexNajwiêkszej = 0;
+		int indexNajwiekszej = 0;
 		for (int index2 = 0; index2 < iloscOcen.length; index2++) {
-			if (najwiêkszaIloœæOcenWTablicy < iloscOcen[index2]) {
-				najwiêkszaIloœæOcenWTablicy = iloscOcen[index2];
-				indexNajwiêkszej = index2;
+			if (najwiekszaIloscOcenWTablicy < iloscOcen[index2]) {
+				najwiekszaIloscOcenWTablicy = iloscOcen[index2];
+				indexNajwiekszej = index2;
 			}
 		}
-		System.out.println("Najczêœciej wystêpuj¹c¹ ocen¹ jest " + (indexNajwiêkszej + 1));
+		System.out.println("Najczï¿½ciej wystï¿½pujï¿½cï¿½ ocenï¿½ jest " + (indexNajwiekszej + 1));
 
 	}
 }
 
 /*
- * Napisz funkcjê, która wybiera najmniejsz¹ z trzech liczb.
+ * Napisz funkcjï¿½, ktï¿½ra wybiera najmniejszï¿½ z trzech liczb.
  * 
  * 
  * //
@@ -498,8 +498,8 @@ class Main {
  * 
  * for (int s1 = 1; s1 <= 10; s1++) { for (int s2 = 1; s2 <= (10 - s1); s2++) {
  * System.out.print(" "); } for (int a = 1; a <= s1; a++) {
- * System.out.print("3 "); // Tutaj spacja obok liczby drukowanej sprawia ¿e
- * zmienia siê trójk¹t !!! } System.out.println(); }
+ * System.out.print("3 "); // Tutaj spacja obok liczby drukowanej sprawia ï¿½e
+ * zmienia siï¿½ trï¿½jkï¿½t !!! } System.out.println(); }
  * 
  * System.out.println();
  * 
@@ -518,12 +518,12 @@ class Main {
  * 
  * }
  * 
- * /* Napisz funkcjê, która wybiera najmniejsz¹ z trzech liczb.
+ * /* Napisz funkcjï¿½, ktï¿½ra wybiera najmniejszï¿½ z trzech liczb.
  * 
  * 
  * 
  * 
- * Wskazówka: Musisz napisaæ cia³o istniej¹cej funkcji min. Wymagania:
+ * Wskazï¿½wka: Musisz napisaï¿½ ciaï¿½o istniejï¿½cej funkcji min. Wymagania:
  * 
  * The program should display text on the screen. The min method should not
  * display text on the screen. The main method should call the min method four
