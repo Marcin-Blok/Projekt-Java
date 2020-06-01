@@ -98,14 +98,16 @@ public static void main(String[] args) {
 		// Zad 3.c
 		System.out.println("Zadanie 3.c");
 		FunkcionalInterface articleReader2 = (text) -> {
-			char dot = '.';
-			char[] array = text.toCharArray();
-			if((array.length-1) != '.') {
-			}
-			for(int i = 0; i < array.length; i++) {
-				array[0] = Character.toUpperCase(array[0]);
-			}return new String(array);
 			
+			String result = text;
+			
+			if(text.charAt(text.length()-1) != '.') {
+				result += ".";
+			}
+			
+			String firstChar = String.valueOf(text.charAt(0));
+			
+			return result.replace(firstChar, firstChar.toUpperCase());
 		};
 		
 		try {
@@ -113,6 +115,14 @@ public static void main(String[] args) {
 		} catch (TooLongException e) {
 			System.out.println("Too long");
 		}
+		
+		
+		try {
+			System.out.println(articleReader2.reader("jakieś zdanie."));
+		} catch (TooLongException e) {
+			System.out.println("Too long");
+		}
+	
 		
 	}
 }
