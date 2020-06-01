@@ -115,6 +115,15 @@ public class LambdaExpressionExamples {
 		} catch (LengthException e) {
 			System.out.println(e.getMessage());
 		}
+		
+		Osoba osoba = new Osoba("Marek", 52);
+		boolean czyUdaloSie = osoba.zwiekszWiek(22);
+
+		if(czyUdaloSie) {
+			System.out.println("Zwiększony wiek: "+osoba.getWiek());
+		}
+		
+		osoba.zwiekszWiek();
 	}
 
 	private static void runNumericTest(int a, int b) {
@@ -125,4 +134,5 @@ public class LambdaExpressionExamples {
 		int[] tab = { 1, 142, 12, 5, 512, 32, 132, 12, 3123 };
 		System.out.println(a.calc(tab) + b);
 	}
+
 }
