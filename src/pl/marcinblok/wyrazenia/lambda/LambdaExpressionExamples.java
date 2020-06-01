@@ -124,6 +124,41 @@ public class LambdaExpressionExamples {
 		}
 		
 		osoba.zwiekszWiek();
+		
+//		NumericCondition czyLiczbaJestWiekszaRownaOd18 = (n) -> n>=18;
+		NumericCondition czyLiczbaJestWiekszaRownaOd18 = Utils::czyPelnoletni;
+		System.out.println("Czy jestem większa równa 18? "+czyLiczbaJestWiekszaRownaOd18.check(18));
+		
+		System.out.println("Czy pełnoletnia: "+Utils.czyPelnoletni(18));
+		
+		int[] liczby = {1,2,5,5,2,2,5,2,23,62};
+		Utils utils = new Utils();
+		NumericCondition czyPodzielnaPrzez2 = utils::czyParzysta;  
+		for (int liczba : liczby) {
+			System.out.println("Czy liczba "+liczba+" jest podzielna przez 2? "+czyPodzielnaPrzez2.check(liczba));
+		}
+		
+		double cena = 5.55;
+		double cena2 = 2.21;
+		System.out.println("Oblicz cenę po obniżce: "+utils.roznica(cena, cena2));
+		
+		System.out.println("wiek: "+osoba.getWiek());
+		
+		NumberOperation<Integer> no = (a, b) -> (int)a-b;
+		osoba.zmniejszWiek(no, 20);
+		osoba.zmniejszWiek(utils::<Integer>roznica, 20);
+		System.out.println("wiek: "+osoba.getWiek());
+		
+		InitializeOsoba<String> osobaZImieniem = Osoba::new;
+		InitializeOsoba<Integer> osobaZWiekiem = Osoba::new;
+		
+		Osoba karol = osobaZImieniem.create("Karol");
+		System.out.println("wiek: "+karol.getWiek());
+		System.out.println("imie: "+karol.getImie());
+		
+		Osoba ziutek = osobaZWiekiem.create(55);
+		System.out.println("wiek: "+ziutek.getWiek());
+		System.out.println("imie: "+ziutek.getImie());
 	}
 
 	private static void runNumericTest(int a, int b) {

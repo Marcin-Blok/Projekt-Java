@@ -10,6 +10,16 @@ public class Osoba {
 		this.wiek = wiek;
 	}
 	
+	public Osoba() {}
+	
+	public Osoba(String imie) {
+		this.imie = imie;
+	}
+	
+	public Osoba(int wiek) {
+		this.wiek = wiek;
+	}
+	
 	public boolean zwiekszWiek(int wartosc) {
 		
 		NumericCondition nc = (x) -> {
@@ -18,6 +28,10 @@ public class Osoba {
 		};
 		
 		return nc.check(wartosc);
+	}
+	
+	public void zmniejszWiek(NumberOperation<? super Integer> no, int wartosc) {
+		wiek = no.func(wiek, wartosc);
 	}
 	
 	public void zwiekszWiek() {
