@@ -28,5 +28,11 @@ public class StreamExamples {
 		System.out.println("------------ Na jakie litery rozpoczynają się imiona studentów");
 		studenci.stream().map((student) -> student.getImie().charAt(0)).distinct().forEach((litera) -> System.out.println(litera));
 
+		
+		// Zadania
+		// 1. wyświetl studentó z indeksami ropoczynającymi się na cyfrę 3 lub 8
+		// 2. oblicz średnią z parzystych indeksów
+		// 3. Wyświetl każdego studenta w formacie np. pierwsza litera imienia + nazwisko np. sleyk
+		
 	}
 }
