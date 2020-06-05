@@ -11,10 +11,37 @@ public class Utils {
 	
 	public static List<Student> generateStudents(int count) {
 		List<Student> generated = new ArrayList<>();
+
+		String nazwisko = "abc";
 		for (int i = 0; i < count; i++) {
-			generated.add(new Student(generujImie(), generujNazwisko(), generujIndex()));
+			
+			if(i % 2 == 0) {
+				nazwisko = generujNazwisko();
+			}
+			
+			generated.add(new Student(generujImie(), nazwisko, generujIndex(), generujSrednia()));
 		}
 		return generated;
+	}
+	
+	public static List<Pracownik> generatePraconicy(int count) {
+		List<Pracownik> generated = new ArrayList<>();
+		
+		for (int i = 0; i < count; i++) {
+			generated.add(new Pracownik(generujImie(), generujPensje()));
+		}
+		return generated;
+	}
+
+
+	private static int generujPensje() {
+		Random rnd = new Random();
+		return (int)2222 + rnd.nextInt(41212);
+	}
+
+	private static double generujSrednia() {
+		Random rnd = new Random();
+		return 1 + rnd.nextInt(5);
 	}
 
 	private static int generujIndex() {
