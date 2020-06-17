@@ -1,9 +1,7 @@
 package pl.marcinblok.wyrazenia.stream;
 
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
-import java.util.Set;
-import java.util.stream.Collectors;
 
 public class StreamExamples {
 	public static void main(String[] args) {
@@ -48,27 +46,27 @@ public class StreamExamples {
 //			System.out.println(s.getImie());
 //		}
 
-		System.out.println("------------ Poszukaj studenta z największą średnią");
-		Optional<Student> max = studenci.stream().max(new StudentComparatorByAVG());
-		if (max.isPresent()) {
-			System.out.println(max.get());
-		}
-
-		System.out.println("------------ Poszukaj studenta z najmniejszą średnią");
-		Optional<Student> min = studenci.stream().min(new StudentComparatorByAVG());
-		if (min.isPresent()) {
-			System.out.println(min.get());
-		}
-
-		System.out.print("------------ Ile jest średnich powyżej 3.0? ");
-		int ile = studenci.stream().map(s -> s.getAverage()).reduce(0.0, (w, s) -> {
-			if (s > 3.0) {
-				System.out.println("znalazłem: "+s);
-				return w+1;
-			} else {
-				return w;
-			}
-		}).intValue();
+//		System.out.println("------------ Poszukaj studenta z największą średnią");
+//		Optional<Student> max = studenci.stream().max(new StudentComparatorByAVG());
+//		if (max.isPresent()) {
+//			System.out.println(max.get());
+//		}
+//
+//		System.out.println("------------ Poszukaj studenta z najmniejszą średnią");
+//		Optional<Student> min = studenci.stream().min(new StudentComparatorByAVG());
+//		if (min.isPresent()) {
+//			System.out.println(min.get());
+//		}
+//
+//		System.out.print("------------ Ile jest średnich powyżej 3.0? ");
+//		int ile = studenci.stream().map(s -> s.getAverage()).reduce(0.0, (w, s) -> {
+//			if (s > 3.0) {
+//				System.out.println("znalazłem: "+s);
+//				return w+1;
+//			} else {
+//				return w;
+//			}
+//		}).intValue();
 		
 		/*
 		 	znalazłem: 4.0
@@ -83,15 +81,15 @@ public class StreamExamples {
 			(2.0, 2.0) -> 2.0
 			(2.0, 5.0) -> 3.0
 		 */
-		System.out.println(ile);
-
-		List<Pracownik> pracownicy = Utils.generatePraconicy(20);
-		System.out.println("------------ Policz ile potrzebujesz na wypłatę pensji dla pracowników.");
-		Optional<Integer> sumaPensji = pracownicy.stream().map(pracownik -> pracownik.getPensja())
-				.reduce((p1, p2) -> p1 + p2);
-		System.out.println("Wszyscy pracownicy: ");
-		pracownicy.forEach(System.out::println);
-		System.out.println("Suma pensji: " + sumaPensji.get());
+//		System.out.println(ile);
+//
+//		List<Pracownik> pracownicy = Utils.generatePraconicy(20);
+//		System.out.println("------------ Policz ile potrzebujesz na wypłatę pensji dla pracowników.");
+//		Optional<Integer> sumaPensji = pracownicy.stream().map(pracownik -> pracownik.getPensja())
+//				.reduce((p1, p2) -> p1 + p2);
+//		System.out.println("Wszyscy pracownicy: ");
+//		pracownicy.forEach(System.out::println);
+//		System.out.println("Suma pensji: " + sumaPensji.get());
 
 		// 22
 		// 1
@@ -109,23 +107,34 @@ public class StreamExamples {
 		 * 
 		 */
 		
-		System.out.println("------- Znajdz studentó ze średnią powyżej 3.0");
-		List<Student> studenciZWyzszaSrednia = studenci.stream().filter(s -> s.getAverage()>3.0).collect(Collectors.toList());
+//		System.out.println("------- Znajdz studentó ze średnią powyżej 3.0");
+//		List<Student> studenciZWyzszaSrednia = studenci.stream().filter(s -> s.getAverage()>3.0).collect(Collectors.toList());
+//		
+//		System.out.println("Ilu ich jest ? "+studenciZWyzszaSrednia.size());
+//		
+//		Set<Student> studenciZWyzszaSrednia2 = studenci.stream().filter(s -> s.getAverage()>3.0).collect(Collectors.toSet());
+//		System.out.println("Ilu ich jest ? "+studenciZWyzszaSrednia2.size());
+//		
+//		List<Student> studenciZWyzszaSrednia3 = studenci.stream().filter(s -> s.getAverage()>3.0).distinct().collect(Collectors.toList());
+//		System.out.println("Ilu ich jest ? "+studenciZWyzszaSrednia3.size());
+//		
 		
-		System.out.println("Ilu ich jest ? "+studenciZWyzszaSrednia.size());
-		
-		Set<Student> studenciZWyzszaSrednia2 = studenci.stream().filter(s -> s.getAverage()>3.0).collect(Collectors.toSet());
-		System.out.println("Ilu ich jest ? "+studenciZWyzszaSrednia2.size());
-		
-		List<Student> studenciZWyzszaSrednia3 = studenci.stream().filter(s -> s.getAverage()>3.0).distinct().collect(Collectors.toList());
-		System.out.println("Ilu ich jest ? "+studenciZWyzszaSrednia3.size());
-		
+		List<Student> studenci2 = new ArrayList<>();
+		studenci2.add(new Student("Marian", "Kowalski", 2212));
+		studenci2.add(new Student("Kasia", "Nowak", 32512));
+		studenci2.add(new Student("Zofia", "Adamska", 82322));
 		
 		// Zadania
 		// 1. wyświetl studentó z indeksami ropoczynającymi się na cyfrę 3 lub 8
+		studenci2.stream().filter((student) -> String.valueOf(student.getIndex()).substring(0,1).equals("3") || String.valueOf(student.getIndex()).substring(0,1).equals("8")).forEach(System.out::println);
+		
+		
 		// 2. oblicz średnią z parzystych indeksów
 		// 3. Wyświetl każdego studenta w formacie np. pierwsza litera imienia +
 		// nazwisko np. sleyk
+		
+		
+		studenci2.stream().forEach((student) -> System.out.println(student.getImie().charAt(0)+student.getNazwisko()));
 		
 
 	}
